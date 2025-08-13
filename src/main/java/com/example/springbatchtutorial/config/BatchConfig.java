@@ -97,7 +97,7 @@ public class BatchConfig {
     public Step step1SaveToDatabase() {
         log.info("📝 Configuring Step 1: Save CSV data to database");
         return new StepBuilder("step1SaveToDatabase", jobRepository)
-                .<Person, Person>chunk(10, transactionManager)
+                .<Person, Person>chunk(100, transactionManager)
                 .reader(csvItemReader)
                 .writer(upsertPersonItemWriter())
                 .listener((StepExecutionListener) upsertPersonItemWriter())
@@ -105,7 +105,7 @@ public class BatchConfig {
                     @Override
                     public void beforeStep(@NonNull StepExecution stepExecution) {
                         log.info("🚀 Starting Step 1: Reading CSV and saving to database");
-                        log.info("   - Chunk size: 10");
+                        log.info("   - Chunk size: 100");
                         log.info("   - Step name: {}", stepExecution.getStepName());
                     }
 
@@ -136,10 +136,10 @@ public class BatchConfig {
     public Step step2CalculateAge() {
         log.info("🧮 Configuring Step 2: Calculate age for all persons");
         return new StepBuilder("step2CalculateAge", jobRepository)
-                .<Person, Person>chunk(10, transactionManager)
+                .<Person, Person>chunk(500, transactionManager)
                 .reader(databaseItemReader)
                 .processor(ageCalculationProcessor)
-                .writer(upsertPersonItemWriter())
+                .writer(batchThenUpsertWriter())
                 .listener((StepExecutionListener) upsertPersonItemWriter())
                 .faultTolerant()
                 .skip(AgeCalculationSkippableException.class)
@@ -150,7 +150,7 @@ public class BatchConfig {
                     @Override
                     public void beforeStep(@NonNull StepExecution stepExecution) {
                         log.info("🚀 Starting Step 2: Calculating ages via API");
-                        log.info("   - Chunk size: 10");
+                        log.info("   - Chunk size: 5");
                         log.info("   - Step name: {}", stepExecution.getStepName());
                     }
 
@@ -199,6 +199,23 @@ public class BatchConfig {
                     }
                 })
                 .build();
+    }
+
+    @Bean
+    public ItemWriter<Person> batchThenUpsertWriter() {
+        return items -> {
+            if (items == null || items.isEmpty()) {
+                return;
+            }
+            java.util.List<Person> batch = new java.util.ArrayList<>(items.size());
+            for (Person p : items) {
+                batch.add(p);
+            }
+            // One API call per chunk (size 5) to calculate ages for all persons in the chunk
+            ageCalculationService.calculateAgesForPersons(batch);
+            // Then upsert to DB using the same chunk
+            upsertPersonItemWriter().write(items);
+        };
     }
 
     @Bean
@@ -493,6 +510,7 @@ public class BatchConfig {
 
         final AtomicInteger processedCounter = new AtomicInteger(0);
         final ConcurrentHashMap<String, Integer> emailToAttempts = new ConcurrentHashMap<>();
+        final AtomicInteger apiItemCounter = new AtomicInteger(0); // counts actual API calls to log batches of 5
 
         return person -> {
             log.debug("🧮 Processing age for: {} {} ({})", person.getFirstName(), person.getLastName(), person.getEmail());
@@ -519,12 +537,10 @@ public class BatchConfig {
                 }
             }
 
-            Person updatedPerson = ageCalculationService.calculateAgeForPerson(person);
-            if (updatedPerson.getAge() != null) {
-                log.debug("✅ Age calculated for {} {}: {} years old", updatedPerson.getFirstName(), updatedPerson.getLastName(), updatedPerson.getAge());
-            } else {
-                log.warn("⚠️ Failed to calculate age for {} {} - API returned null", updatedPerson.getFirstName(), updatedPerson.getLastName());
-            }
+            // No per-item API call anymore; processor only handles scenario logic and returns person as-is.
+            Person updatedPerson = person;
+            // Age is calculated in the batch writer (one API call per chunk). Keep processor logs minimal.
+            log.debug("⏭️ Age will be calculated in batch writer for {} {}", updatedPerson.getFirstName(), updatedPerson.getLastName());
             return updatedPerson;
         };
     }

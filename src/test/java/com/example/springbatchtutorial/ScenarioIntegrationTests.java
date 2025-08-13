@@ -16,6 +16,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
 import java.util.List;
+import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -41,6 +42,7 @@ class ScenarioIntegrationTests {
         copy("input/samples/persons_success.csv", "input/persons.csv");
 
         JobExecution exec = jobLauncherTestUtils.launchJob(new JobParametersBuilder()
+                .addString("time", UUID.randomUUID().toString(), true)
                 .addString("scenario", "SUCCESS")
                 .addString("csvPath", "input/persons.csv")
                 .toJobParameters());
@@ -54,6 +56,7 @@ class ScenarioIntegrationTests {
         copy("input/samples/persons_success.csv", "input/persons.csv");
 
         JobExecution exec = jobLauncherTestUtils.launchJob(new JobParametersBuilder()
+                .addString("time", UUID.randomUUID().toString(), true)
                 .addString("scenario", "PARTIAL")
                 .addString("skipEvery", "2")
                 .addString("csvPath", "input/persons.csv")
@@ -68,6 +71,7 @@ class ScenarioIntegrationTests {
         copy("input/samples/persons_fail.csv", "input/persons.csv");
 
         JobExecution exec = jobLauncherTestUtils.launchJob(new JobParametersBuilder()
+                .addString("time", UUID.randomUUID().toString(), true)
                 .addString("scenario", "FAIL")
                 .addString("csvPath", "input/persons.csv")
                 .toJobParameters());
@@ -80,6 +84,23 @@ class ScenarioIntegrationTests {
         copy("input/samples/persons_retryable.csv", "input/persons.csv");
 
         JobExecution exec = jobLauncherTestUtils.launchJob(new JobParametersBuilder()
+                .addString("time", UUID.randomUUID().toString(), true)
+                .addString("scenario", "RETRYABLE")
+                .addString("retryAttempts", "2")
+                .addString("csvPath", "input/persons.csv")
+                .toJobParameters());
+
+        assertEquals(BatchStatus.COMPLETED, exec.getStatus());
+    }
+
+    @Test
+    void largeVolume_retryable_retriesThenCompletes() throws Exception {
+        // Dataset contains 10k rows with every 7th having an invalid email (filtered in Step 1).
+        // Drive Step 2 with RETRYABLE so each item retries transiently and then succeeds.
+        copy("input/samples/persons_partial_10k.csv", "input/persons.csv");
+
+        JobExecution exec = jobLauncherTestUtils.launchJob(new JobParametersBuilder()
+                .addString("time", java.util.UUID.randomUUID().toString(), true)
                 .addString("scenario", "RETRYABLE")
                 .addString("retryAttempts", "2")
                 .addString("csvPath", "input/persons.csv")
@@ -94,6 +115,7 @@ class ScenarioIntegrationTests {
         copy("input/samples/persons_partial.csv", "input/persons.csv");
 
         JobExecution first = jobLauncherTestUtils.launchJob(new JobParametersBuilder()
+                .addString("time", UUID.randomUUID().toString(), true)
                 .addString("scenario", "SUCCESS")
                 .addString("csvPath", "input/persons.csv")
                 .toJobParameters());
@@ -145,6 +167,7 @@ class ScenarioIntegrationTests {
 
         // 3) Second run: should upsert the newly valid persons
         JobExecution second = jobLauncherTestUtils.launchJob(new JobParametersBuilder()
+                .addString("time", UUID.randomUUID().toString(), true)
                 .addString("scenario", "SUCCESS")
                 .addString("csvPath", "input/persons.csv")
                 .toJobParameters());

@@ -22,10 +22,13 @@ This project demonstrates a complete Spring Batch flow with a small frontend for
   - Step 1 `step1SaveToDatabase`: Read CSV and upsert to DB
     - Reader: `csvItemReader()` reads and validates CSV
     - Writer: `jpaItemWriter()` upserts by email (duplicate handling)
-  - Step 2 `step2CalculateAge`: Calculate ages and persist
+  - Step 2 `step2CalculateAge`: Calculate ages (batched) and persist
     - Reader: `databaseItemReader()` loads persons from DB
-    - Processor: `ageCalculationProcessor(...)` calls a mock Age API and applies scenario behavior
-    - Writer: `jpaItemWriter()` updates DB
+    - Processor: `ageCalculationProcessor(...)` applies scenario behavior (no API call per item)
+    - Chunk size: 5 (demo default; tweakable for performance experiments)
+    - Writer: `batchThenUpsertWriter()`
+      - Calls one batched mock Age API per chunk via `AgeCalculationService.calculateAgesForPersons(List<Person>)`
+      - Then delegates to `UpsertPersonItemWriter` to upsert ages
     - Fault tolerance: `.skip(AgeCalculationSkippableException)` and `.retry(AgeCalculationRetryableException)`
   - Step 3 `step3WriteToFile`: Write results to file
     - Reader: `fileOutputDatabaseReader()` loads persons for output
@@ -153,6 +156,60 @@ Parameters are accepted by `JobController` and injected into the processor via `
 - `@Value("#{jobParameters['scenario']}") String scenarioParam`
 - `@Value("#{jobParameters['skipEvery']}") String skipEveryParam`
 - `@Value("#{jobParameters['retryAttempts']}") String retryAttemptsParam`
+
+## Status correlation (job/steps ↔ item statuses)
+- Performance demo: API batch size vs Step 2 chunk size
+
+  The mock Age API now supports up to 100 persons per request. Step 2 uses a chunk size of 5 by default so you can observe the effect of changing chunk size in `BatchConfig`.
+
+  How to try:
+  1) Open `src/main/java/com/example/springbatchtutorial/config/BatchConfig.java`.
+  2) In `step2CalculateAge()`, change the chunk size from `5` to `100`:
+     - Before: `<Person, Person>chunk(5, transactionManager)`
+     - After:  `<Person, Person>chunk(100, transactionManager)`
+  3) Run a larger dataset (e.g., generate from the UI `/api/data/generate/partial10k` then point the CSV path to that file) with `scenario=RETRYABLE` and `retryAttempts=2`.
+  4) Compare total duration in the logs and `/api/jobs/executions` between chunk 5 and chunk 100. You should see fewer API calls and improved total time when chunking at 100 due to amortized fixed overhead per call.
+
+  Notes:
+  - The mock API simulates a fixed overhead plus a small per-item cost. Batching reduces total calls and thus total fixed overhead.
+  - If you set chunk > 100, the writer will split the call into sub-batches of 100 to respect the API’s max batch size.
+
+
+This section explains how high-level job outcomes relate to per-person `processingStatus` values.
+
+Key item statuses (`Person.processingStatus`):
+- IMPORTED: Set in Step 1 for newly inserted rows (via `UpsertPersonItemWriter`).
+- PROCESSED: Set when an existing row is updated in Step 2 (age calculated and saved).
+- REJECTED: Set in Step 2 SkipListener when an item is skipped during processing.
+
+How statuses evolve by scenario:
+- SUCCESS
+  - Job/Steps: all steps COMPLETED.
+  - Items: Step 1 inserts as IMPORTED (new rows). Step 2 calculates age in batched API calls (size 5) and upserts; affected rows become PROCESSED.
+  - Result: all valid items end as PROCESSED with non-null age.
+
+- PARTIAL (e.g., `skipEvery=2`)
+  - Job/Steps: Step 2 is COMPLETED with skips; job COMPLETED.
+  - Items: Items that trigger skippable errors are marked REJECTED (SkipListener updates DB). Others are PROCESSED. Any invalid CSV rows filtered in Step 1 never reach Step 2 and therefore remain absent from DB.
+  - Result: mix of PROCESSED and REJECTED in DB; skip counts visible in execution history.
+
+- RETRYABLE (e.g., `retryAttempts=2`)
+  - Job/Steps: Step 2 COMPLETED after in-chunk retries (limit is 3 by default). Job COMPLETED.
+  - Items: After transient errors are exhausted, age is calculated and saved; items end as PROCESSED. No REJECTED records (unless retry limit is exceeded).
+
+- FAIL
+  - Job/Steps: Step 2 fails immediately; job FAILED.
+  - Items: Step 1 may have imported items (IMPORTED). Step 2 halts before upserting ages, so PROCESSED is not set for that run. No REJECTED unless failure is due to skippable errors (not the case for FAIL scenario).
+
+Typical flow of a single record:
+1) Step 1 upsert → status IMPORTED (if newly inserted).
+2) Step 2 batch-of-5 API call → if successful, writer updates person (sets age) and status becomes PROCESSED.
+3) If Step 2 skipped the item (skippable error), SkipListener sets status to REJECTED.
+
+Observability tips:
+- Logs show: "External age API batch request - size=5 (one call for entire chunk)" exactly once per chunk in Step 2.
+- `/api/jobs/executions` returns per-step skip counts and the writer’s inserted/updated/written counts.
+- The frontend Dashboard shows Step 2 chunk size and highlights skips; Execution History lists overall status and duration.
 
 ## Monitoring and control
 

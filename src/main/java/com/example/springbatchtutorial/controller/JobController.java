@@ -36,7 +36,7 @@ public class JobController {
     private final JobOperator jobOperator;
     private final PersonRepository personRepository;
     
-    @PostMapping("/data/generate/partial10k")
+    @GetMapping("/data/generate/partial10k")
     public ResponseEntity<String> generateLargePartialCsv() {
         try {
             File dir = new File("input/samples");

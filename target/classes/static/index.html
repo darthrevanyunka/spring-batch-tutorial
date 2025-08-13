@@ -303,6 +303,8 @@
                         <option value="input/samples/persons_partial.csv">persons_partial.csv</option>
                         <option value="input/samples/persons_fail.csv">persons_fail.csv</option>
                         <option value="input/samples/persons_retryable.csv">persons_retryable.csv</option>
+                        <option value="input/persons_fix_scenario_step1.csv">persons_fix_scenario_step1.csv</option>
+                        <option value="input/persons_fix_scenario_step2_fixed.csv">persons_fix_scenario_step2_fixed.csv</option>
                     </select>
                 </label>
             </div>
@@ -349,6 +351,18 @@
                             <div id="avgDuration" class="metric-value">0s</div>
                             <div class="metric-label">Avg Duration</div>
                         </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>🛠️ Fix-the-file Demo</h3>
+                    <p style="margin-top:0">Run once with invalid rows, then run again with the corrected file to upsert fixes.</p>
+                    <div>
+                        <button class="button" onclick="runFixScenarioStep1()">1) Run with invalid CSV</button>
+                        <button class="button success" onclick="runFixScenarioStep2()">2) Run with fixed CSV</button>
+                    </div>
+                    <div style="margin-top:10px; font-size: 12px; color: #555;">
+                        Uses files: <code>input/persons_fix_scenario_step1.csv</code> → <code>input/persons_fix_scenario_step2_fixed.csv</code>
                     </div>
                 </div>
             </div>
@@ -487,6 +501,46 @@
             } finally {
                 button.disabled = false;
                 button.textContent = '▶️ Start Job';
+            }
+        }
+
+        async function runFixScenarioStep1() {
+            // First pass with invalid rows
+            try {
+                const response = await fetch('/api/jobs/start', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ scenario: 'SUCCESS', csvPath: 'input/persons_fix_scenario_step1.csv' })
+                });
+                const result = await response.text();
+                if (response.ok) {
+                    showStatus('▶️ Step 1 started: invalid CSV loaded. Now run Step 2 to apply fixes.', 'info');
+                    startMonitoring();
+                } else {
+                    showStatus('❌ Step 1 error: ' + result, 'error');
+                }
+            } catch (e) {
+                showStatus('❌ Step 1 error: ' + e.message, 'error');
+            }
+        }
+
+        async function runFixScenarioStep2() {
+            // Second pass with corrected rows to upsert
+            try {
+                const response = await fetch('/api/jobs/start', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ scenario: 'SUCCESS', csvPath: 'input/persons_fix_scenario_step2_fixed.csv' })
+                });
+                const result = await response.text();
+                if (response.ok) {
+                    showStatus('✅ Step 2 started: fixed CSV loaded. Previously invalid rows will be upserted.', 'success');
+                    startMonitoring();
+                } else {
+                    showStatus('❌ Step 2 error: ' + result, 'error');
+                }
+            } catch (e) {
+                showStatus('❌ Step 2 error: ' + e.message, 'error');
             }
         }
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.springbatchtutorial.BatchJobIntegrationTest" time="0.363" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.springbatchtutorial.BatchJobIntegrationTest" time="0.325" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -14,7 +14,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="ZA"/>
     <property name="sun.boot.library.path" value="/Users/jurgenroos/Library/Java/JavaVirtualMachines/corretto-17.0.10/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/jurgenroos/spring-batch-tutorial/target/surefire/surefirebooter-20250813213133966_3.jar /Users/jurgenroos/spring-batch-tutorial/target/surefire 2025-08-13T21-31-33_925-jvmRun1 surefire-20250813213133966_1tmp surefire_0-20250813213133966_2tmp"/>
+    <property name="sun.java.command" value="/Users/jurgenroos/spring-batch-tutorial/target/surefire/surefirebooter-20250813222216656_3.jar /Users/jurgenroos/spring-batch-tutorial/target/surefire 2025-08-13T22-22-16_619-jvmRun1 surefire-20250813222216656_1tmp surefire_0-20250813222216656_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/jurgenroos/spring-batch-tutorial/target/test-classes:/Users/jurgenroos/spring-batch-tutorial/target/classes:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-starter-batch/3.2.0/spring-boot-starter-batch-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-starter/3.2.0/spring-boot-starter-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot/3.2.0/spring-boot-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.2.0/spring-boot-autoconfigure-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.2.0/spring-boot-starter-logging-3.2.0.jar:/Users/jurgenroos/.m2/repository/ch/qos/logback/logback-classic/1.4.11/logback-classic-1.4.11.jar:/Users/jurgenroos/.m2/repository/ch/qos/logback/logback-core/1.4.11/logback-core-1.4.11.jar:/Users/jurgenroos/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.21.1/log4j-to-slf4j-2.21.1.jar:/Users/jurgenroos/.m2/repository/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1.jar:/Users/jurgenroos/.m2/repository/org/slf4j/jul-to-slf4j/2.0.9/jul-to-slf4j-2.0.9.jar:/Users/jurgenroos/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/jurgenroos/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.2.0/spring-boot-starter-jdbc-3.2.0.jar:/Users/jurgenroos/.m2/repository/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1.jar:/Users/jurgenroos/.m2/repository/org/springframework/batch/spring-batch-core/5.1.0/spring-batch-core-5.1.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/batch/spring-batch-infrastructure/5.1.0/spring-batch-infrastructure-5.1.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/retry/spring-retry/2.0.4/spring-retry-2.0.4.jar:/Users/jurgenroos/.m2/repository/org/springframework/spring-aop/6.1.1/spring-aop-6.1.1.jar:/Users/jurgenroos/.m2/repository/org/springframework/spring-beans/6.1.1/spring-beans-6.1.1.jar:/Users/jurgenroos/.m2/repository/org/springframework/spring-context/6.1.1/spring-context-6.1.1.jar:/Users/jurgenroos/.m2/repository/org/springframework/spring-tx/6.1.1/spring-tx-6.1.1.jar:/Users/jurgenroos/.m2/repository/io/micrometer/micrometer-core/1.12.0/micrometer-core-1.12.0.jar:/Users/jurgenroos/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.12/HdrHistogram-2.1.12.jar:/Users/jurgenroos/.m2/repository/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.2.0/spring-boot-starter-web-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.2.0/spring-boot-starter-json-3.2.0.jar:/Users/jurgenroos/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.3/jackson-databind-2.15.3.jar:/Users/jurgenroos/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.3/jackson-annotations-2.15.3.jar:/Users/jurgenroos/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.3/jackson-core-2.15.3.jar:/Users/jurgenroos/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.3/jackson-datatype-jdk8-2.15.3.jar:/Users/jurgenroos/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.3/jackson-datatype-jsr310-2.15.3.jar:/Users/jurgenroos/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.3/jackson-module-parameter-names-2.15.3.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.2.0/spring-boot-starter-tomcat-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.16/tomcat-embed-core-10.1.16.jar:/Users/jurgenroos/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.16/tomcat-embed-websocket-10.1.16.jar:/Users/jurgenroos/.m2/repository/org/springframework/spring-web/6.1.1/spring-web-6.1.1.jar:/Users/jurgenroos/.m2/repository/org/springframework/spring-webmvc/6.1.1/spring-webmvc-6.1.1.jar:/Users/jurgenroos/.m2/repository/org/springframework/spring-expression/6.1.1/spring-expression-6.1.1.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-starter-actuator/3.2.0/spring-boot-starter-actuator-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-actuator-autoconfigure/3.2.0/spring-boot-actuator-autoconfigure-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-actuator/3.2.0/spring-boot-actuator-3.2.0.jar:/Users/jurgenroos/.m2/repository/io/micrometer/micrometer-observation/1.12.0/micrometer-observation-1.12.0.jar:/Users/jurgenroos/.m2/repository/io/micrometer/micrometer-commons/1.12.0/micrometer-commons-1.12.0.jar:/Users/jurgenroos/.m2/repository/io/micrometer/micrometer-jakarta9/1.12.0/micrometer-jakarta9-1.12.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.2.0/spring-boot-starter-data-jpa-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-starter-aop/3.2.0/spring-boot-starter-aop-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/aspectj/aspectjweaver/1.9.20.1/aspectjweaver-1.9.20.1.jar:/Users/jurgenroos/.m2/repository/org/hibernate/orm/hibernate-core/6.3.1.Final/hibernate-core-6.3.1.Final.jar:/Users/jurgenroos/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/Users/jurgenroos/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/jurgenroos/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/Users/jurgenroos/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.jar:/Users/jurgenroos/.m2/repository/io/smallrye/jandex/3.1.2/jandex-3.1.2.jar:/Users/jurgenroos/.m2/repository/com/fasterxml/classmate/1.6.0/classmate-1.6.0.jar:/Users/jurgenroos/.m2/repository/net/bytebuddy/byte-buddy/1.14.10/byte-buddy-1.14.10.jar:/Users/jurgenroos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.4/jaxb-runtime-4.0.4.jar:/Users/jurgenroos/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.4/jaxb-core-4.0.4.jar:/Users/jurgenroos/.m2/repository/org/eclipse/angus/angus-activation/2.0.1/angus-activation-2.0.1.jar:/Users/jurgenroos/.m2/repository/org/glassfish/jaxb/txw2/4.0.4/txw2-4.0.4.jar:/Users/jurgenroos/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/Users/jurgenroos/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/jurgenroos/.m2/repository/org/antlr/antlr4-runtime/4.10.1/antlr4-runtime-4.10.1.jar:/Users/jurgenroos/.m2/repository/org/springframework/data/spring-data-jpa/3.2.0/spring-data-jpa-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/data/spring-data-commons/3.2.0/spring-data-commons-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/spring-orm/6.1.1/spring-orm-6.1.1.jar:/Users/jurgenroos/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/Users/jurgenroos/.m2/repository/org/springframework/spring-aspects/6.1.1/spring-aspects-6.1.1.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.2.0/spring-boot-starter-validation-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.16/tomcat-embed-el-10.1.16.jar:/Users/jurgenroos/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final.jar:/Users/jurgenroos/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/Users/jurgenroos/.m2/repository/com/h2database/h2/2.2.224/h2-2.2.224.jar:/Users/jurgenroos/.m2/repository/com/opencsv/opencsv/5.8/opencsv-5.8.jar:/Users/jurgenroos/.m2/repository/org/apache/commons/commons-lang3/3.13.0/commons-lang3-3.13.0.jar:/Users/jurgenroos/.m2/repository/org/apache/commons/commons-text/1.10.0/commons-text-1.10.0.jar:/Users/jurgenroos/.m2/repository/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.jar:/Users/jurgenroos/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/jurgenroos/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/Users/jurgenroos/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/Users/jurgenroos/.m2/repository/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.2.0/spring-boot-starter-test-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-test/3.2.0/spring-boot-test-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.2.0/spring-boot-test-autoconfigure-3.2.0.jar:/Users/jurgenroos/.m2/repository/com/jayway/jsonpath/json-path/2.8.0/json-path-2.8.0.jar:/Users/jurgenroos/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.1/jakarta.xml.bind-api-4.0.1.jar:/Users/jurgenroos/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.2/jakarta.activation-api-2.1.2.jar:/Users/jurgenroos/.m2/repository/net/minidev/json-smart/2.5.0/json-smart-2.5.0.jar:/Users/jurgenroos/.m2/repository/net/minidev/accessors-smart/2.5.0/accessors-smart-2.5.0.jar:/Users/jurgenroos/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/Users/jurgenroos/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/Users/jurgenroos/.m2/repository/org/awaitility/awaitility/4.2.0/awaitility-4.2.0.jar:/Users/jurgenroos/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/jurgenroos/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.1/junit-jupiter-5.10.1.jar:/Users/jurgenroos/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/Users/jurgenroos/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/jurgenroos/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/Users/jurgenroos/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/jurgenroos/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.1/junit-jupiter-params-5.10.1.jar:/Users/jurgenroos/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.1/junit-jupiter-engine-5.10.1.jar:/Users/jurgenroos/.m2/repository/org/junit/platform/junit-platform-engine/1.10.1/junit-platform-engine-1.10.1.jar:/Users/jurgenroos/.m2/repository/org/mockito/mockito-core/5.7.0/mockito-core-5.7.0.jar:/Users/jurgenroos/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.10/byte-buddy-agent-1.14.10.jar:/Users/jurgenroos/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/jurgenroos/.m2/repository/org/mockito/mockito-junit-jupiter/5.7.0/mockito-junit-jupiter-5.7.0.jar:/Users/jurgenroos/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/Users/jurgenroos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/jurgenroos/.m2/repository/org/springframework/spring-core/6.1.1/spring-core-6.1.1.jar:/Users/jurgenroos/.m2/repository/org/springframework/spring-jcl/6.1.1/spring-jcl-6.1.1.jar:/Users/jurgenroos/.m2/repository/org/springframework/spring-test/6.1.1/spring-test-6.1.1.jar:/Users/jurgenroos/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/Users/jurgenroos/.m2/repository/org/springframework/batch/spring-batch-test/5.1.0/spring-batch-test-5.1.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/spring-jdbc/6.1.1/spring-jdbc-6.1.1.jar:"/>
@@ -32,7 +32,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="FILE_LOG_CHARSET" value="UTF-8"/>
     <property name="java.awt.headless" value="true"/>
-    <property name="surefire.real.class.path" value="/Users/jurgenroos/spring-batch-tutorial/target/surefire/surefirebooter-20250813213133966_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/jurgenroos/spring-batch-tutorial/target/surefire/surefirebooter-20250813222216656_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="17.0.10+7-LTS"/>
@@ -51,7 +51,7 @@
     <property name="user.dir" value="/Users/jurgenroos/spring-batch-tutorial"/>
     <property name="os.arch" value="aarch64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="PID" value="37979"/>
+    <property name="PID" value="48422"/>
     <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
     <property name="native.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/Users/jurgenroos/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
@@ -64,96 +64,97 @@
     <property name="CONSOLE_LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss} - %msg%n"/>
     <property name="LOGGED_APPLICATION_NAME" value="[spring-batch-tutorial] "/>
   </properties>
-  <testcase name="testCompleteBatchJob" classname="com.example.springbatchtutorial.BatchJobIntegrationTest" time="0.358">
-    <system-out><![CDATA[2025-08-13 21:31:53 - Could not detect default configuration classes for test class [com.example.springbatchtutorial.BatchJobIntegrationTest]: BatchJobIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2025-08-13 21:31:53 - Found @SpringBootConfiguration com.example.springbatchtutorial.SpringBatchTutorialApplication for test class com.example.springbatchtutorial.BatchJobIntegrationTest
-2025-08-13 21:31:53 - Job: [SimpleJob: [name=processPersonJob]] launched with the following parameters: [{'random':'{value=3859308887820728266, type=class java.lang.Long, identifying=true}'}]
-2025-08-13 21:31:53 - 
+  <testcase name="testCompleteBatchJob" classname="com.example.springbatchtutorial.BatchJobIntegrationTest" time="0.321">
+    <system-out><![CDATA[2025-08-13 22:23:32 - Could not detect default configuration classes for test class [com.example.springbatchtutorial.BatchJobIntegrationTest]: BatchJobIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-13 22:23:32 - Found @SpringBootConfiguration com.example.springbatchtutorial.SpringBatchTutorialApplication for test class com.example.springbatchtutorial.BatchJobIntegrationTest
+2025-08-13 22:23:32 - Job: [SimpleJob: [name=processPersonJob]] launched with the following parameters: [{'random':'{value=-998719462063418375, type=class java.lang.Long, identifying=true}'}]
+2025-08-13 22:23:32 - 
 
 🎬 ========================================
-2025-08-13 21:31:53 - 🚀 JOB STARTING: processPersonJob
-2025-08-13 21:31:53 - 📋 Job Instance ID: 5
-2025-08-13 21:31:53 - 🆔 Job Execution ID: 5
-2025-08-13 21:31:53 - ⏰ Start Time: 2025-08-13T21:31:53.303710
-2025-08-13 21:31:53 - 📊 Job Parameters: {'random':'{value=3859308887820728266, type=class java.lang.Long, identifying=true}'}
-2025-08-13 21:31:53 - 🎯 Expected Steps: processPersonJob
-2025-08-13 21:31:53 - ========================================
+2025-08-13 22:23:32 - 🚀 JOB STARTING: processPersonJob
+2025-08-13 22:23:32 - 📋 Job Instance ID: 8
+2025-08-13 22:23:32 - 🆔 Job Execution ID: 8
+2025-08-13 22:23:32 - ⏰ Start Time: 2025-08-13T22:23:32.796742
+2025-08-13 22:23:32 - 📊 Job Parameters: {'random':'{value=-998719462063418375, type=class java.lang.Long, identifying=true}'}
+2025-08-13 22:23:32 - 🎯 Expected Steps: processPersonJob
+2025-08-13 22:23:32 - ========================================
 
 
-2025-08-13 21:31:53 - Executing step: [step1SaveToDatabase]
-2025-08-13 21:31:53 - 🚀 Starting Step 1: Reading CSV and saving to database
-2025-08-13 21:31:53 -    - Chunk size: 10
-2025-08-13 21:31:53 -    - Step name: step1SaveToDatabase
-2025-08-13 21:31:53 - 📖 Creating CSV item reader
-2025-08-13 21:31:53 - 🔄 Initializing CSV reader - loading data from file
-2025-08-13 21:31:53 - 📂 Reading CSV file: input/persons.csv
-2025-08-13 21:31:53 - 📄 File exists, size: 270 bytes
-2025-08-13 21:31:53 - 📋 CSV Header: FirstName, LastName, Email, DateOfBirth
-2025-08-13 21:31:53 - 📊 CSV Processing Summary:
-2025-08-13 21:31:53 -    - Total lines processed: 5
-2025-08-13 21:31:53 -    - Valid records: 5
-2025-08-13 21:31:53 -    - Invalid records: 0
-2025-08-13 21:31:53 -    - Success rate: 100%
-2025-08-13 21:31:53 - 📊 Successfully parsed 5 persons from CSV file
-2025-08-13 21:31:53 - 📊 Loaded 5 persons from CSV file
-2025-08-13 21:31:53 - 🏁 Finished reading CSV data - processed 5 persons
-2025-08-13 21:31:53 - ✅ Completed Step 1: Save to database
-2025-08-13 21:31:53 -    - Read count: 5
-2025-08-13 21:31:53 -    - Write count: 5
-2025-08-13 21:31:53 -    - Skip count: 0
-2025-08-13 21:31:53 -    📦 Upsert summary - inserted: 5, updated: 0, written: 5
-2025-08-13 21:31:53 - Step: [step1SaveToDatabase] executed in 6ms
-2025-08-13 21:31:53 - Executing step: [step2CalculateAge]
-2025-08-13 21:31:53 - 🚀 Starting Step 2: Calculating ages via API
-2025-08-13 21:31:53 -    - Chunk size: 10
-2025-08-13 21:31:53 -    - Step name: step2CalculateAge
-2025-08-13 21:31:53 - 🗄️ Creating database item reader
-2025-08-13 21:31:53 - 🔄 Initializing database reader - loading all persons
-2025-08-13 21:31:53 - 📊 Loaded 5 persons from database for execution 5
-2025-08-13 21:31:53 - 🏁 Finished reading from database - processed 5 persons
-2025-08-13 21:31:53 - 🧮 Creating age calculation processor
-2025-08-13 21:31:53 - ✅ Completed Step 2: Age calculation
-2025-08-13 21:31:53 -    - Read count: 5
-2025-08-13 21:31:53 -    - Write count: 5
-2025-08-13 21:31:53 -    - Skip count: 0
-2025-08-13 21:31:53 -    📦 Upsert summary - inserted: 0, updated: 5, written: 5
-2025-08-13 21:31:53 - Step: [step2CalculateAge] executed in 282ms
-2025-08-13 21:31:53 - Executing step: [step3WriteToFile]
-2025-08-13 21:31:53 - 🚀 Starting Step 3: Writing results to file
-2025-08-13 21:31:53 -    - Chunk size: 10
-2025-08-13 21:31:53 -    - Output file: output/persons_with_age.txt
-2025-08-13 21:31:53 -    - Step name: step3WriteToFile
-2025-08-13 21:31:53 - 📄 Creating database item reader for file output
-2025-08-13 21:31:53 - 🔄 Initializing file output database reader - loading all persons
-2025-08-13 21:31:53 - 📊 Loaded 5 persons from database for file output (exec=5, age != null)
-2025-08-13 21:31:53 - 🏁 Finished reading from database for file output - processed 5 persons
-2025-08-13 21:31:53 - ✅ Completed Step 3: Write to file
-2025-08-13 21:31:53 -    - Read count: 5
-2025-08-13 21:31:53 -    - Write count: 5
-2025-08-13 21:31:53 -    - Skip count: 0
-2025-08-13 21:31:53 - Step: [step3WriteToFile] executed in 5ms
-2025-08-13 21:31:53 - 🏁 ========================================
-2025-08-13 21:31:53 - ✅ JOB COMPLETED: processPersonJob
-2025-08-13 21:31:53 - 📋 Job Instance ID: 5
-2025-08-13 21:31:53 - 🆔 Job Execution ID: 5
-2025-08-13 21:31:53 - 📊 Final Status: COMPLETED
-2025-08-13 21:31:53 - ⏰ Start Time: 2025-08-13T21:31:53.303710
-2025-08-13 21:31:53 - ⏰ End Time: 2025-08-13T21:31:53.604545
-2025-08-13 21:31:53 - ⏱️ Total Duration: 300 ms
-2025-08-13 21:31:53 - 📈 Exit Code: COMPLETED
-2025-08-13 21:31:53 - 📝 Exit Description: 
-2025-08-13 21:31:53 - 📋 Step Execution Summary:
-2025-08-13 21:31:53 -    📝 Step: step1SaveToDatabase - Status: COMPLETED - Read: 5 - Write: 5 - Skip: 0
-2025-08-13 21:31:53 -    ⏱️ Step Duration: 6 ms
-2025-08-13 21:31:53 -    📝 Step: step2CalculateAge - Status: COMPLETED - Read: 5 - Write: 5 - Skip: 0
-2025-08-13 21:31:53 -    ⏱️ Step Duration: 282 ms
-2025-08-13 21:31:53 -    📝 Step: step3WriteToFile - Status: COMPLETED - Read: 5 - Write: 5 - Skip: 0
-2025-08-13 21:31:53 -    ⏱️ Step Duration: 5 ms
-2025-08-13 21:31:53 - 🎉 JOB SUCCESSFULLY COMPLETED!
-2025-08-13 21:31:53 - ========================================
+2025-08-13 22:23:32 - Executing step: [step1SaveToDatabase]
+2025-08-13 22:23:32 - 🚀 Starting Step 1: Reading CSV and saving to database
+2025-08-13 22:23:32 -    - Chunk size: 100
+2025-08-13 22:23:32 -    - Step name: step1SaveToDatabase
+2025-08-13 22:23:32 - 📖 Creating CSV item reader
+2025-08-13 22:23:32 - 🔄 Initializing CSV reader - loading data from file
+2025-08-13 22:23:32 - 📂 Reading CSV file: input/persons.csv
+2025-08-13 22:23:32 - 📄 File exists, size: 270 bytes
+2025-08-13 22:23:32 - 📋 CSV Header: FirstName, LastName, Email, DateOfBirth
+2025-08-13 22:23:32 - 📊 CSV Processing Summary:
+2025-08-13 22:23:32 -    - Total lines processed: 5
+2025-08-13 22:23:32 -    - Valid records: 5
+2025-08-13 22:23:32 -    - Invalid records: 0
+2025-08-13 22:23:32 -    - Success rate: 100%
+2025-08-13 22:23:32 - 📊 Successfully parsed 5 persons from CSV file
+2025-08-13 22:23:32 - 📊 Loaded 5 persons from CSV file
+2025-08-13 22:23:32 - 🏁 Finished reading CSV data - processed 5 persons
+2025-08-13 22:23:32 - ✅ Completed Step 1: Save to database
+2025-08-13 22:23:32 -    - Read count: 5
+2025-08-13 22:23:32 -    - Write count: 5
+2025-08-13 22:23:32 -    - Skip count: 0
+2025-08-13 22:23:32 -    📦 Upsert summary - inserted: 5, updated: 0, written: 5
+2025-08-13 22:23:32 - Step: [step1SaveToDatabase] executed in 2ms
+2025-08-13 22:23:32 - Executing step: [step2CalculateAge]
+2025-08-13 22:23:32 - 🚀 Starting Step 2: Calculating ages via API
+2025-08-13 22:23:32 -    - Chunk size: 5
+2025-08-13 22:23:32 -    - Step name: step2CalculateAge
+2025-08-13 22:23:32 - 🗄️ Creating database item reader
+2025-08-13 22:23:32 - 🔄 Initializing database reader - loading all persons
+2025-08-13 22:23:32 - 📊 Loaded 5 persons from database for execution 8
+2025-08-13 22:23:32 - 🏁 Finished reading from database - processed 5 persons
+2025-08-13 22:23:32 - 🧮 Creating age calculation processor
+2025-08-13 22:23:32 - 🌐 External age API batch request - size=5 (one call for entire chunk)
+2025-08-13 22:23:32 - ✅ Completed Step 2: Age calculation
+2025-08-13 22:23:32 -    - Read count: 5
+2025-08-13 22:23:32 -    - Write count: 5
+2025-08-13 22:23:32 -    - Skip count: 0
+2025-08-13 22:23:32 -    📦 Upsert summary - inserted: 0, updated: 5, written: 5
+2025-08-13 22:23:32 - Step: [step2CalculateAge] executed in 133ms
+2025-08-13 22:23:32 - Executing step: [step3WriteToFile]
+2025-08-13 22:23:32 - 🚀 Starting Step 3: Writing results to file
+2025-08-13 22:23:32 -    - Chunk size: 10
+2025-08-13 22:23:32 -    - Output file: output/persons_with_age.txt
+2025-08-13 22:23:32 -    - Step name: step3WriteToFile
+2025-08-13 22:23:32 - 📄 Creating database item reader for file output
+2025-08-13 22:23:32 - 🔄 Initializing file output database reader - loading all persons
+2025-08-13 22:23:32 - 📊 Loaded 5 persons from database for file output (exec=8, age != null)
+2025-08-13 22:23:32 - 🏁 Finished reading from database for file output - processed 5 persons
+2025-08-13 22:23:32 - ✅ Completed Step 3: Write to file
+2025-08-13 22:23:32 -    - Read count: 5
+2025-08-13 22:23:32 -    - Write count: 5
+2025-08-13 22:23:32 -    - Skip count: 0
+2025-08-13 22:23:32 - Step: [step3WriteToFile] executed in 1ms
+2025-08-13 22:23:32 - 🏁 ========================================
+2025-08-13 22:23:32 - ✅ JOB COMPLETED: processPersonJob
+2025-08-13 22:23:32 - 📋 Job Instance ID: 8
+2025-08-13 22:23:32 - 🆔 Job Execution ID: 8
+2025-08-13 22:23:32 - 📊 Final Status: COMPLETED
+2025-08-13 22:23:32 - ⏰ Start Time: 2025-08-13T22:23:32.796742
+2025-08-13 22:23:32 - ⏰ End Time: 2025-08-13T22:23:32.936464
+2025-08-13 22:23:32 - ⏱️ Total Duration: 139 ms
+2025-08-13 22:23:32 - 📈 Exit Code: COMPLETED
+2025-08-13 22:23:32 - 📝 Exit Description: 
+2025-08-13 22:23:32 - 📋 Step Execution Summary:
+2025-08-13 22:23:32 -    📝 Step: step1SaveToDatabase - Status: COMPLETED - Read: 5 - Write: 5 - Skip: 0
+2025-08-13 22:23:32 -    ⏱️ Step Duration: 2 ms
+2025-08-13 22:23:32 -    📝 Step: step2CalculateAge - Status: COMPLETED - Read: 5 - Write: 5 - Skip: 0
+2025-08-13 22:23:32 -    ⏱️ Step Duration: 133 ms
+2025-08-13 22:23:32 -    📝 Step: step3WriteToFile - Status: COMPLETED - Read: 5 - Write: 5 - Skip: 0
+2025-08-13 22:23:32 -    ⏱️ Step Duration: 1 ms
+2025-08-13 22:23:32 - 🎉 JOB SUCCESSFULLY COMPLETED!
+2025-08-13 22:23:32 - ========================================
 
 
-2025-08-13 21:31:53 - Job: [SimpleJob: [name=processPersonJob]] completed with the following parameters: [{'random':'{value=3859308887820728266, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 300ms
+2025-08-13 22:23:32 - Job: [SimpleJob: [name=processPersonJob]] completed with the following parameters: [{'random':'{value=-998719462063418375, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 139ms
 Person: John, Age: 27
 Person: Jane, Age: 31
 Person: Bob, Age: 39
