@@ -1,0 +1,69 @@
+spring:
+  application:
+    name: spring-batch-tutorial
+  
+  # Database Configuration
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+  
+  # JPA Configuration
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: false
+        dialect: org.hibernate.dialect.H2Dialect
+  
+  # H2 Console
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  
+  # Batch Configuration
+  batch:
+    job:
+      enabled: false  # Disable auto-start of jobs
+    jdbc:
+      initialize-schema: always
+    job-repository:
+      table-prefix: BATCH_
+  
+  # Actuator Configuration
+  management:
+    endpoints:
+      web:
+        exposure:
+          include: health,info,metrics,batch-jobs,batch-job-executions
+    endpoint:
+      health:
+        show-details: always
+      batch-jobs:
+        enabled: true
+      batch-job-executions:
+        enabled: true
+
+# Logging Configuration
+logging:
+  level:
+    com.example.springbatchtutorial: INFO
+    com.example.springbatchtutorial.controller: WARN
+    org.springframework.batch: INFO
+    org.hibernate: ERROR
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+
+# Server Configuration
+server:
+  port: 8080
+
+# Batch Configuration
+batch:
+  csv:
+    file:
+      path: input/persons.csv 

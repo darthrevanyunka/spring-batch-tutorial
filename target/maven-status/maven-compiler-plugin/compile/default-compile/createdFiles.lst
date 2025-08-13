@@ -1,0 +1,13 @@
+com/example/springbatchtutorial/config/BatchConfig$5.class
+com/example/springbatchtutorial/config/BatchConfig.class
+com/example/springbatchtutorial/service/AgeCalculationService.class
+com/example/springbatchtutorial/repository/PersonRepository.class
+com/example/springbatchtutorial/listener/JobCompletionNotificationListener.class
+com/example/springbatchtutorial/config/BatchConfig$3.class
+com/example/springbatchtutorial/config/BatchConfig$7.class
+com/example/springbatchtutorial/config/BatchConfig$2.class
+com/example/springbatchtutorial/config/BatchConfig$8.class
+com/example/springbatchtutorial/model/Person.class
+com/example/springbatchtutorial/config/BatchConfig$1.class
+com/example/springbatchtutorial/SpringBatchTutorialApplication.class
+com/example/springbatchtutorial/config/BatchConfig$4.class

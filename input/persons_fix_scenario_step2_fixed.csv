@@ -1,0 +1,7 @@
+FirstName,LastName,Email,DateOfBirth
+FIXRUN_VALID_01,Demo,fixrun.valid01@example.com,1990-01-01
+FIXRUN_INVALID_EMAIL,Demo,fixrun.invalid.email@example.com,1991-02-02
+FIXRUN_EMPTY_DOB,Demo,fixrun.emptydob@example.com,1992-02-02
+FIXRUN_FUTURE_DOB,Demo,fixrun.future@example.com,1990-05-05
+FIXRUN_TOO_OLD,Demo,fixrun.toolold@example.com,1980-01-01
+FIXRUN_VALID_02,Demo,fixrun.valid02@example.com,1992-03-03

@@ -1,0 +1,866 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.springbatchtutorial.ScenarioIntegrationTests" time="16.125" tests="4" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/jurgenroos/spring-batch-tutorial/target/test-classes:/Users/jurgenroos/spring-batch-tutorial/target/classes:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-starter-batch/3.2.0/spring-boot-starter-batch-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-starter/3.2.0/spring-boot-starter-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot/3.2.0/spring-boot-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.2.0/spring-boot-autoconfigure-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.2.0/spring-boot-starter-logging-3.2.0.jar:/Users/jurgenroos/.m2/repository/ch/qos/logback/logback-classic/1.4.11/logback-classic-1.4.11.jar:/Users/jurgenroos/.m2/repository/ch/qos/logback/logback-core/1.4.11/logback-core-1.4.11.jar:/Users/jurgenroos/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.21.1/log4j-to-slf4j-2.21.1.jar:/Users/jurgenroos/.m2/repository/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1.jar:/Users/jurgenroos/.m2/repository/org/slf4j/jul-to-slf4j/2.0.9/jul-to-slf4j-2.0.9.jar:/Users/jurgenroos/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/jurgenroos/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.2.0/spring-boot-starter-jdbc-3.2.0.jar:/Users/jurgenroos/.m2/repository/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1.jar:/Users/jurgenroos/.m2/repository/org/springframework/batch/spring-batch-core/5.1.0/spring-batch-core-5.1.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/batch/spring-batch-infrastructure/5.1.0/spring-batch-infrastructure-5.1.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/retry/spring-retry/2.0.4/spring-retry-2.0.4.jar:/Users/jurgenroos/.m2/repository/org/springframework/spring-aop/6.1.1/spring-aop-6.1.1.jar:/Users/jurgenroos/.m2/repository/org/springframework/spring-beans/6.1.1/spring-beans-6.1.1.jar:/Users/jurgenroos/.m2/repository/org/springframework/spring-context/6.1.1/spring-context-6.1.1.jar:/Users/jurgenroos/.m2/repository/org/springframework/spring-tx/6.1.1/spring-tx-6.1.1.jar:/Users/jurgenroos/.m2/repository/io/micrometer/micrometer-core/1.12.0/micrometer-core-1.12.0.jar:/Users/jurgenroos/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.12/HdrHistogram-2.1.12.jar:/Users/jurgenroos/.m2/repository/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.2.0/spring-boot-starter-web-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.2.0/spring-boot-starter-json-3.2.0.jar:/Users/jurgenroos/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.3/jackson-databind-2.15.3.jar:/Users/jurgenroos/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.3/jackson-annotations-2.15.3.jar:/Users/jurgenroos/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.3/jackson-core-2.15.3.jar:/Users/jurgenroos/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.3/jackson-datatype-jdk8-2.15.3.jar:/Users/jurgenroos/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.3/jackson-datatype-jsr310-2.15.3.jar:/Users/jurgenroos/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.3/jackson-module-parameter-names-2.15.3.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.2.0/spring-boot-starter-tomcat-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.16/tomcat-embed-core-10.1.16.jar:/Users/jurgenroos/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.16/tomcat-embed-websocket-10.1.16.jar:/Users/jurgenroos/.m2/repository/org/springframework/spring-web/6.1.1/spring-web-6.1.1.jar:/Users/jurgenroos/.m2/repository/org/springframework/spring-webmvc/6.1.1/spring-webmvc-6.1.1.jar:/Users/jurgenroos/.m2/repository/org/springframework/spring-expression/6.1.1/spring-expression-6.1.1.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-starter-actuator/3.2.0/spring-boot-starter-actuator-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-actuator-autoconfigure/3.2.0/spring-boot-actuator-autoconfigure-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-actuator/3.2.0/spring-boot-actuator-3.2.0.jar:/Users/jurgenroos/.m2/repository/io/micrometer/micrometer-observation/1.12.0/micrometer-observation-1.12.0.jar:/Users/jurgenroos/.m2/repository/io/micrometer/micrometer-commons/1.12.0/micrometer-commons-1.12.0.jar:/Users/jurgenroos/.m2/repository/io/micrometer/micrometer-jakarta9/1.12.0/micrometer-jakarta9-1.12.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.2.0/spring-boot-starter-data-jpa-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-starter-aop/3.2.0/spring-boot-starter-aop-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/aspectj/aspectjweaver/1.9.20.1/aspectjweaver-1.9.20.1.jar:/Users/jurgenroos/.m2/repository/org/hibernate/orm/hibernate-core/6.3.1.Final/hibernate-core-6.3.1.Final.jar:/Users/jurgenroos/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/Users/jurgenroos/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/jurgenroos/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/Users/jurgenroos/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.jar:/Users/jurgenroos/.m2/repository/io/smallrye/jandex/3.1.2/jandex-3.1.2.jar:/Users/jurgenroos/.m2/repository/com/fasterxml/classmate/1.6.0/classmate-1.6.0.jar:/Users/jurgenroos/.m2/repository/net/bytebuddy/byte-buddy/1.14.10/byte-buddy-1.14.10.jar:/Users/jurgenroos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.4/jaxb-runtime-4.0.4.jar:/Users/jurgenroos/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.4/jaxb-core-4.0.4.jar:/Users/jurgenroos/.m2/repository/org/eclipse/angus/angus-activation/2.0.1/angus-activation-2.0.1.jar:/Users/jurgenroos/.m2/repository/org/glassfish/jaxb/txw2/4.0.4/txw2-4.0.4.jar:/Users/jurgenroos/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/Users/jurgenroos/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/jurgenroos/.m2/repository/org/antlr/antlr4-runtime/4.10.1/antlr4-runtime-4.10.1.jar:/Users/jurgenroos/.m2/repository/org/springframework/data/spring-data-jpa/3.2.0/spring-data-jpa-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/data/spring-data-commons/3.2.0/spring-data-commons-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/spring-orm/6.1.1/spring-orm-6.1.1.jar:/Users/jurgenroos/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/Users/jurgenroos/.m2/repository/org/springframework/spring-aspects/6.1.1/spring-aspects-6.1.1.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.2.0/spring-boot-starter-validation-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.16/tomcat-embed-el-10.1.16.jar:/Users/jurgenroos/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final.jar:/Users/jurgenroos/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/Users/jurgenroos/.m2/repository/com/h2database/h2/2.2.224/h2-2.2.224.jar:/Users/jurgenroos/.m2/repository/com/opencsv/opencsv/5.8/opencsv-5.8.jar:/Users/jurgenroos/.m2/repository/org/apache/commons/commons-lang3/3.13.0/commons-lang3-3.13.0.jar:/Users/jurgenroos/.m2/repository/org/apache/commons/commons-text/1.10.0/commons-text-1.10.0.jar:/Users/jurgenroos/.m2/repository/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.jar:/Users/jurgenroos/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/jurgenroos/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/Users/jurgenroos/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/Users/jurgenroos/.m2/repository/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.2.0/spring-boot-starter-test-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-test/3.2.0/spring-boot-test-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.2.0/spring-boot-test-autoconfigure-3.2.0.jar:/Users/jurgenroos/.m2/repository/com/jayway/jsonpath/json-path/2.8.0/json-path-2.8.0.jar:/Users/jurgenroos/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.1/jakarta.xml.bind-api-4.0.1.jar:/Users/jurgenroos/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.2/jakarta.activation-api-2.1.2.jar:/Users/jurgenroos/.m2/repository/net/minidev/json-smart/2.5.0/json-smart-2.5.0.jar:/Users/jurgenroos/.m2/repository/net/minidev/accessors-smart/2.5.0/accessors-smart-2.5.0.jar:/Users/jurgenroos/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/Users/jurgenroos/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/Users/jurgenroos/.m2/repository/org/awaitility/awaitility/4.2.0/awaitility-4.2.0.jar:/Users/jurgenroos/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/jurgenroos/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.1/junit-jupiter-5.10.1.jar:/Users/jurgenroos/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/Users/jurgenroos/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/jurgenroos/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/Users/jurgenroos/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/jurgenroos/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.1/junit-jupiter-params-5.10.1.jar:/Users/jurgenroos/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.1/junit-jupiter-engine-5.10.1.jar:/Users/jurgenroos/.m2/repository/org/junit/platform/junit-platform-engine/1.10.1/junit-platform-engine-1.10.1.jar:/Users/jurgenroos/.m2/repository/org/mockito/mockito-core/5.7.0/mockito-core-5.7.0.jar:/Users/jurgenroos/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.10/byte-buddy-agent-1.14.10.jar:/Users/jurgenroos/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/jurgenroos/.m2/repository/org/mockito/mockito-junit-jupiter/5.7.0/mockito-junit-jupiter-5.7.0.jar:/Users/jurgenroos/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/Users/jurgenroos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/jurgenroos/.m2/repository/org/springframework/spring-core/6.1.1/spring-core-6.1.1.jar:/Users/jurgenroos/.m2/repository/org/springframework/spring-jcl/6.1.1/spring-jcl-6.1.1.jar:/Users/jurgenroos/.m2/repository/org/springframework/spring-test/6.1.1/spring-test-6.1.1.jar:/Users/jurgenroos/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/Users/jurgenroos/.m2/repository/org/springframework/batch/spring-batch-test/5.1.0/spring-batch-test-5.1.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/spring-jdbc/6.1.1/spring-jdbc-6.1.1.jar:"/>
+    <property name="java.vm.vendor" value="Amazon.com Inc."/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://aws.amazon.com/corretto/"/>
+    <property name="user.timezone" value="Africa/Johannesburg"/>
+    <property name="org.jboss.logging.provider" value="slf4j"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="ZA"/>
+    <property name="sun.boot.library.path" value="/Users/jurgenroos/Library/Java/JavaVirtualMachines/corretto-17.0.10/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/jurgenroos/spring-batch-tutorial/target/surefire/surefirebooter-20250813193831857_3.jar /Users/jurgenroos/spring-batch-tutorial/target/surefire 2025-08-13T19-38-31_800-jvmRun1 surefire-20250813193831857_1tmp surefire_0-20250813193831857_2tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/jurgenroos/spring-batch-tutorial/target/test-classes:/Users/jurgenroos/spring-batch-tutorial/target/classes:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-starter-batch/3.2.0/spring-boot-starter-batch-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-starter/3.2.0/spring-boot-starter-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot/3.2.0/spring-boot-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.2.0/spring-boot-autoconfigure-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.2.0/spring-boot-starter-logging-3.2.0.jar:/Users/jurgenroos/.m2/repository/ch/qos/logback/logback-classic/1.4.11/logback-classic-1.4.11.jar:/Users/jurgenroos/.m2/repository/ch/qos/logback/logback-core/1.4.11/logback-core-1.4.11.jar:/Users/jurgenroos/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.21.1/log4j-to-slf4j-2.21.1.jar:/Users/jurgenroos/.m2/repository/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1.jar:/Users/jurgenroos/.m2/repository/org/slf4j/jul-to-slf4j/2.0.9/jul-to-slf4j-2.0.9.jar:/Users/jurgenroos/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/jurgenroos/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.2.0/spring-boot-starter-jdbc-3.2.0.jar:/Users/jurgenroos/.m2/repository/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1.jar:/Users/jurgenroos/.m2/repository/org/springframework/batch/spring-batch-core/5.1.0/spring-batch-core-5.1.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/batch/spring-batch-infrastructure/5.1.0/spring-batch-infrastructure-5.1.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/retry/spring-retry/2.0.4/spring-retry-2.0.4.jar:/Users/jurgenroos/.m2/repository/org/springframework/spring-aop/6.1.1/spring-aop-6.1.1.jar:/Users/jurgenroos/.m2/repository/org/springframework/spring-beans/6.1.1/spring-beans-6.1.1.jar:/Users/jurgenroos/.m2/repository/org/springframework/spring-context/6.1.1/spring-context-6.1.1.jar:/Users/jurgenroos/.m2/repository/org/springframework/spring-tx/6.1.1/spring-tx-6.1.1.jar:/Users/jurgenroos/.m2/repository/io/micrometer/micrometer-core/1.12.0/micrometer-core-1.12.0.jar:/Users/jurgenroos/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.12/HdrHistogram-2.1.12.jar:/Users/jurgenroos/.m2/repository/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.2.0/spring-boot-starter-web-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.2.0/spring-boot-starter-json-3.2.0.jar:/Users/jurgenroos/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.3/jackson-databind-2.15.3.jar:/Users/jurgenroos/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.3/jackson-annotations-2.15.3.jar:/Users/jurgenroos/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.3/jackson-core-2.15.3.jar:/Users/jurgenroos/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.3/jackson-datatype-jdk8-2.15.3.jar:/Users/jurgenroos/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.3/jackson-datatype-jsr310-2.15.3.jar:/Users/jurgenroos/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.3/jackson-module-parameter-names-2.15.3.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.2.0/spring-boot-starter-tomcat-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.16/tomcat-embed-core-10.1.16.jar:/Users/jurgenroos/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.16/tomcat-embed-websocket-10.1.16.jar:/Users/jurgenroos/.m2/repository/org/springframework/spring-web/6.1.1/spring-web-6.1.1.jar:/Users/jurgenroos/.m2/repository/org/springframework/spring-webmvc/6.1.1/spring-webmvc-6.1.1.jar:/Users/jurgenroos/.m2/repository/org/springframework/spring-expression/6.1.1/spring-expression-6.1.1.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-starter-actuator/3.2.0/spring-boot-starter-actuator-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-actuator-autoconfigure/3.2.0/spring-boot-actuator-autoconfigure-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-actuator/3.2.0/spring-boot-actuator-3.2.0.jar:/Users/jurgenroos/.m2/repository/io/micrometer/micrometer-observation/1.12.0/micrometer-observation-1.12.0.jar:/Users/jurgenroos/.m2/repository/io/micrometer/micrometer-commons/1.12.0/micrometer-commons-1.12.0.jar:/Users/jurgenroos/.m2/repository/io/micrometer/micrometer-jakarta9/1.12.0/micrometer-jakarta9-1.12.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.2.0/spring-boot-starter-data-jpa-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-starter-aop/3.2.0/spring-boot-starter-aop-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/aspectj/aspectjweaver/1.9.20.1/aspectjweaver-1.9.20.1.jar:/Users/jurgenroos/.m2/repository/org/hibernate/orm/hibernate-core/6.3.1.Final/hibernate-core-6.3.1.Final.jar:/Users/jurgenroos/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/Users/jurgenroos/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/jurgenroos/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/Users/jurgenroos/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.jar:/Users/jurgenroos/.m2/repository/io/smallrye/jandex/3.1.2/jandex-3.1.2.jar:/Users/jurgenroos/.m2/repository/com/fasterxml/classmate/1.6.0/classmate-1.6.0.jar:/Users/jurgenroos/.m2/repository/net/bytebuddy/byte-buddy/1.14.10/byte-buddy-1.14.10.jar:/Users/jurgenroos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.4/jaxb-runtime-4.0.4.jar:/Users/jurgenroos/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.4/jaxb-core-4.0.4.jar:/Users/jurgenroos/.m2/repository/org/eclipse/angus/angus-activation/2.0.1/angus-activation-2.0.1.jar:/Users/jurgenroos/.m2/repository/org/glassfish/jaxb/txw2/4.0.4/txw2-4.0.4.jar:/Users/jurgenroos/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/Users/jurgenroos/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/jurgenroos/.m2/repository/org/antlr/antlr4-runtime/4.10.1/antlr4-runtime-4.10.1.jar:/Users/jurgenroos/.m2/repository/org/springframework/data/spring-data-jpa/3.2.0/spring-data-jpa-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/data/spring-data-commons/3.2.0/spring-data-commons-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/spring-orm/6.1.1/spring-orm-6.1.1.jar:/Users/jurgenroos/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/Users/jurgenroos/.m2/repository/org/springframework/spring-aspects/6.1.1/spring-aspects-6.1.1.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.2.0/spring-boot-starter-validation-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.16/tomcat-embed-el-10.1.16.jar:/Users/jurgenroos/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final.jar:/Users/jurgenroos/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/Users/jurgenroos/.m2/repository/com/h2database/h2/2.2.224/h2-2.2.224.jar:/Users/jurgenroos/.m2/repository/com/opencsv/opencsv/5.8/opencsv-5.8.jar:/Users/jurgenroos/.m2/repository/org/apache/commons/commons-lang3/3.13.0/commons-lang3-3.13.0.jar:/Users/jurgenroos/.m2/repository/org/apache/commons/commons-text/1.10.0/commons-text-1.10.0.jar:/Users/jurgenroos/.m2/repository/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.jar:/Users/jurgenroos/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/jurgenroos/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/Users/jurgenroos/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/Users/jurgenroos/.m2/repository/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.2.0/spring-boot-starter-test-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-test/3.2.0/spring-boot-test-3.2.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.2.0/spring-boot-test-autoconfigure-3.2.0.jar:/Users/jurgenroos/.m2/repository/com/jayway/jsonpath/json-path/2.8.0/json-path-2.8.0.jar:/Users/jurgenroos/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.1/jakarta.xml.bind-api-4.0.1.jar:/Users/jurgenroos/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.2/jakarta.activation-api-2.1.2.jar:/Users/jurgenroos/.m2/repository/net/minidev/json-smart/2.5.0/json-smart-2.5.0.jar:/Users/jurgenroos/.m2/repository/net/minidev/accessors-smart/2.5.0/accessors-smart-2.5.0.jar:/Users/jurgenroos/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/Users/jurgenroos/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/Users/jurgenroos/.m2/repository/org/awaitility/awaitility/4.2.0/awaitility-4.2.0.jar:/Users/jurgenroos/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/jurgenroos/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.1/junit-jupiter-5.10.1.jar:/Users/jurgenroos/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/Users/jurgenroos/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/jurgenroos/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/Users/jurgenroos/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/jurgenroos/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.1/junit-jupiter-params-5.10.1.jar:/Users/jurgenroos/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.1/junit-jupiter-engine-5.10.1.jar:/Users/jurgenroos/.m2/repository/org/junit/platform/junit-platform-engine/1.10.1/junit-platform-engine-1.10.1.jar:/Users/jurgenroos/.m2/repository/org/mockito/mockito-core/5.7.0/mockito-core-5.7.0.jar:/Users/jurgenroos/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.10/byte-buddy-agent-1.14.10.jar:/Users/jurgenroos/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/jurgenroos/.m2/repository/org/mockito/mockito-junit-jupiter/5.7.0/mockito-junit-jupiter-5.7.0.jar:/Users/jurgenroos/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/Users/jurgenroos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/jurgenroos/.m2/repository/org/springframework/spring-core/6.1.1/spring-core-6.1.1.jar:/Users/jurgenroos/.m2/repository/org/springframework/spring-jcl/6.1.1/spring-jcl-6.1.1.jar:/Users/jurgenroos/.m2/repository/org/springframework/spring-test/6.1.1/spring-test-6.1.1.jar:/Users/jurgenroos/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/Users/jurgenroos/.m2/repository/org/springframework/batch/spring-batch-test/5.1.0/spring-batch-test-5.1.0.jar:/Users/jurgenroos/.m2/repository/org/springframework/spring-jdbc/6.1.1/spring-jdbc-6.1.1.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/jurgenroos"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-01-16"/>
+    <property name="java.home" value="/Users/jurgenroos/Library/Java/JavaVirtualMachines/corretto-17.0.10/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/jurgenroos/spring-batch-tutorial"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="FILE_LOG_CHARSET" value="UTF-8"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="surefire.real.class.path" value="/Users/jurgenroos/spring-batch-tutorial/target/surefire/surefirebooter-20250813193831857_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="17.0.10+7-LTS"/>
+    <property name="user.name" value="jurgenroos"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="15.6"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Corretto-17.0.10.7.1"/>
+    <property name="localRepository" value="/Users/jurgenroos/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/corretto/corretto-17/issues/"/>
+    <property name="java.io.tmpdir" value="/var/folders/p6/nndp753d2sj1m25bfhydsj5w0000gn/T/"/>
+    <property name="com.zaxxer.hikari.pool_number" value="2"/>
+    <property name="java.version" value="17.0.10"/>
+    <property name="user.dir" value="/Users/jurgenroos/spring-batch-tutorial"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="25785"/>
+    <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/jurgenroos/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Amazon.com Inc."/>
+    <property name="java.vm.version" value="17.0.10+7-LTS"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="61.0"/>
+    <property name="CONSOLE_LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss} - %msg%n"/>
+    <property name="LOGGED_APPLICATION_NAME" value="[spring-batch-tutorial] "/>
+  </properties>
+  <testcase name="partialScenario_skipsEvery2_completesWithSkips" classname="com.example.springbatchtutorial.ScenarioIntegrationTests" time="1.534">
+    <system-out><![CDATA[2025-08-13 19:38:35 - Could not detect default configuration classes for test class [com.example.springbatchtutorial.ScenarioIntegrationTests]: ScenarioIntegrationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-13 19:38:35 - Found @SpringBootConfiguration com.example.springbatchtutorial.SpringBatchTutorialApplication for test class com.example.springbatchtutorial.ScenarioIntegrationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.0)
+
+2025-08-13 19:38:35 - Starting ScenarioIntegrationTests using Java 17.0.10 with PID 25785 (started by jurgenroos in /Users/jurgenroos/spring-batch-tutorial)
+2025-08-13 19:38:35 - The following 1 profile is active: "test"
+2025-08-13 19:38:35 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-13 19:38:35 - Finished Spring Data repository scanning in 5 ms. Found 1 JPA repository interface.
+2025-08-13 19:38:35 - Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [jobRegistryBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-08-13 19:38:35 - Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [jobRegistryBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-08-13 19:38:35 - Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$PooledDataSourceConfiguration' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$PooledDataSourceConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [jobRegistryBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-08-13 19:38:35 - Bean 'jdbcConnectionDetails' of type [org.springframework.boot.autoconfigure.jdbc.PropertiesJdbcConnectionDetails] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [jobRegistryBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-08-13 19:38:35 - Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [jobRegistryBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-08-13 19:38:35 - Bean 'spring.jpa-org.springframework.boot.autoconfigure.orm.jpa.JpaProperties' of type [org.springframework.boot.autoconfigure.orm.jpa.JpaProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [jobRegistryBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-08-13 19:38:35 - Bean 'spring.jpa.hibernate-org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties' of type [org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [jobRegistryBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-08-13 19:38:35 - Bean 'org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration$HikariPoolDataSourceMetadataProviderConfiguration' of type [org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration$HikariPoolDataSourceMetadataProviderConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [jobRegistryBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-08-13 19:38:35 - Bean 'hikariPoolDataSourceMetadataProvider' of type [org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration$HikariPoolDataSourceMetadataProviderConfiguration$$Lambda$934/0x00000070014b5f38] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [jobRegistryBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-08-13 19:38:35 - Bean 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration' of type [org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [jobRegistryBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-08-13 19:38:35 - Bean 'org.springframework.boot.autoconfigure.transaction.TransactionManagerCustomizationAutoConfiguration' of type [org.springframework.boot.autoconfigure.transaction.TransactionManagerCustomizationAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [jobRegistryBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-08-13 19:38:35 - Bean 'transactionExecutionListeners' of type [org.springframework.boot.autoconfigure.transaction.ExecutionListenersTransactionManagerCustomizer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [jobRegistryBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-08-13 19:38:35 - Bean 'spring.transaction-org.springframework.boot.autoconfigure.transaction.TransactionProperties' of type [org.springframework.boot.autoconfigure.transaction.TransactionProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [jobRegistryBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-08-13 19:38:35 - Bean 'platformTransactionManagerCustomizers' of type [org.springframework.boot.autoconfigure.transaction.TransactionManagerCustomizers] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [jobRegistryBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-08-13 19:38:35 - Bean 'org.springframework.boot.autoconfigure.sql.init.DataSourceInitializationConfiguration' of type [org.springframework.boot.autoconfigure.sql.init.DataSourceInitializationConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [jobRegistryBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-08-13 19:38:35 - Bean 'spring.sql.init-org.springframework.boot.autoconfigure.sql.init.SqlInitializationProperties' of type [org.springframework.boot.autoconfigure.sql.init.SqlInitializationProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [jobRegistryBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-08-13 19:38:35 - Bean 'dataSourceScriptDatabaseInitializer' of type [org.springframework.boot.autoconfigure.sql.init.SqlDataSourceScriptDatabaseInitializer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [jobRegistryBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-08-13 19:38:35 - Bean 'org.springframework.boot.autoconfigure.batch.BatchAutoConfiguration$DataSourceInitializerConfiguration' of type [org.springframework.boot.autoconfigure.batch.BatchAutoConfiguration$DataSourceInitializerConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [jobRegistryBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-08-13 19:38:35 - Bean 'spring.batch-org.springframework.boot.autoconfigure.batch.BatchProperties' of type [org.springframework.boot.autoconfigure.batch.BatchProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [jobRegistryBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-08-13 19:38:35 - HikariPool-2 - Starting...
+2025-08-13 19:38:35 - HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
+2025-08-13 19:38:35 - HikariPool-2 - Start completed.
+2025-08-13 19:38:35 - Bean 'batchDataSourceInitializer' of type [org.springframework.boot.autoconfigure.batch.BatchDataSourceScriptDatabaseInitializer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [jobRegistryBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-08-13 19:38:35 - Bean 'jpaVendorAdapter' of type [org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [jobRegistryBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-08-13 19:38:35 - Bean 'entityManagerFactoryBuilder' of type [org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [jobRegistryBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-08-13 19:38:35 - Bean 'persistenceManagedTypes' of type [org.springframework.orm.jpa.persistenceunit.SimplePersistenceManagedTypes] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [jobRegistryBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-08-13 19:38:35 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-13 19:38:35 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-13 19:38:35 - Bean 'entityManagerFactory' of type [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [jobRegistryBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-08-13 19:38:35 - Bean 'entityManagerFactory' of type [jdk.proxy2.$Proxy135] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [jobRegistryBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-08-13 19:38:35 - Bean 'transactionManager' of type [org.springframework.orm.jpa.JpaTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [jobRegistryBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-08-13 19:38:35 - Bean 'org.springframework.boot.autoconfigure.batch.BatchAutoConfiguration$SpringBootBatchConfiguration' of type [org.springframework.boot.autoconfigure.batch.BatchAutoConfiguration$SpringBootBatchConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [jobRegistryBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-08-13 19:38:35 - 🔧 Creating Spring Batch job: processPersonJob
+2025-08-13 19:38:35 - 📝 Configuring Step 1: Save CSV data to database
+2025-08-13 19:38:35 - org.springframework.batch.item.ItemReader is an interface. The implementing class will not be queried for annotation based listener configurations. If using @StepScope on a @Bean method, be sure to return the implementing class so listener annotations can be used.
+2025-08-13 19:38:35 - 🧮 Configuring Step 2: Calculate age for all persons
+2025-08-13 19:38:35 - org.springframework.batch.item.ItemReader is an interface. The implementing class will not be queried for annotation based listener configurations. If using @StepScope on a @Bean method, be sure to return the implementing class so listener annotations can be used.
+2025-08-13 19:38:35 - org.springframework.batch.item.ItemProcessor is an interface. The implementing class will not be queried for annotation based listener configurations. If using @StepScope on a @Bean method, be sure to return the implementing class so listener annotations can be used.
+2025-08-13 19:38:35 - org.springframework.batch.item.ItemReader is an interface. The implementing class will not be queried for annotation based listener configurations. If using @StepScope on a @Bean method, be sure to return the implementing class so listener annotations can be used.
+2025-08-13 19:38:35 - org.springframework.batch.item.ItemProcessor is an interface. The implementing class will not be queried for annotation based listener configurations. If using @StepScope on a @Bean method, be sure to return the implementing class so listener annotations can be used.
+2025-08-13 19:38:35 - 📄 Configuring Step 3: Write results to output file
+2025-08-13 19:38:35 - org.springframework.batch.item.ItemReader is an interface. The implementing class will not be queried for annotation based listener configurations. If using @StepScope on a @Bean method, be sure to return the implementing class so listener annotations can be used.
+2025-08-13 19:38:35 - 💾 Creating JPA item writer with duplicate handling
+2025-08-13 19:38:35 - 📄 Creating flat file item writer
+2025-08-13 19:38:35 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-13 19:38:35 - Adding welcome page: class path resource [static/index.html]
+2025-08-13 19:38:36 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-08-13 19:38:36 - Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-08-13 19:38:36 - Started ScenarioIntegrationTests in 0.578 seconds (process running for 4.228)
+2025-08-13 19:38:36 - Job: [SimpleJob: [name=processPersonJob]] launched with the following parameters: [{'skipEvery':'{value=2, type=class java.lang.String, identifying=true}','csvPath':'{value=input/persons.csv, type=class java.lang.String, identifying=true}','scenario':'{value=PARTIAL, type=class java.lang.String, identifying=true}'}]
+2025-08-13 19:38:36 - 
+
+🎬 ========================================
+2025-08-13 19:38:36 - 🚀 JOB STARTING: processPersonJob
+2025-08-13 19:38:36 - 📋 Job Instance ID: 1
+2025-08-13 19:38:36 - 🆔 Job Execution ID: 1
+2025-08-13 19:38:36 - ⏰ Start Time: 2025-08-13T19:38:36.166313
+2025-08-13 19:38:36 - 📊 Job Parameters: {'skipEvery':'{value=2, type=class java.lang.String, identifying=true}','csvPath':'{value=input/persons.csv, type=class java.lang.String, identifying=true}','scenario':'{value=PARTIAL, type=class java.lang.String, identifying=true}'}
+2025-08-13 19:38:36 - 🎯 Expected Steps: processPersonJob
+2025-08-13 19:38:36 - ========================================
+
+
+2025-08-13 19:38:36 - Executing step: [step1SaveToDatabase]
+2025-08-13 19:38:36 - 🚀 Starting Step 1: Reading CSV and saving to database
+2025-08-13 19:38:36 -    - Chunk size: 10
+2025-08-13 19:38:36 -    - Step name: step1SaveToDatabase
+2025-08-13 19:38:36 - 📖 Creating CSV item reader
+2025-08-13 19:38:36 - 🔄 Initializing CSV reader - loading data from file
+2025-08-13 19:38:36 - 📂 Reading CSV file: input/persons.csv
+2025-08-13 19:38:36 - 📄 File exists, size: 1264 bytes
+2025-08-13 19:38:36 - 📋 CSV Header: FirstName, LastName, Email, DateOfBirth
+2025-08-13 19:38:36 - ⚠️ Line 27: Insufficient columns (expected 4, got 1)
+2025-08-13 19:38:36 - ⚠️ Line 28: Insufficient columns (expected 4, got 1)
+2025-08-13 19:38:36 - 📊 CSV Processing Summary:
+2025-08-13 19:38:36 -    - Total lines processed: 27
+2025-08-13 19:38:36 -    - Valid records: 25
+2025-08-13 19:38:36 -    - Invalid records: 2
+2025-08-13 19:38:36 -    - Success rate: 93%
+2025-08-13 19:38:36 - ⚠️ Validation Errors Summary:
+2025-08-13 19:38:36 -    - Line 27: Insufficient columns (expected 4, got 1)
+2025-08-13 19:38:36 -    - Line 28: Insufficient columns (expected 4, got 1)
+2025-08-13 19:38:36 - 📊 Successfully parsed 25 persons from CSV file
+2025-08-13 19:38:36 - 📊 Loaded 25 persons from CSV file
+2025-08-13 19:38:36 - 🏁 Finished reading CSV data - processed 25 persons
+2025-08-13 19:38:36 - ✅ Completed Step 1: Save to database
+2025-08-13 19:38:36 -    - Read count: 25
+2025-08-13 19:38:36 -    - Write count: 25
+2025-08-13 19:38:36 -    - Skip count: 0
+2025-08-13 19:38:36 -    📦 Upsert summary - inserted: 25, updated: 0, written: 25
+2025-08-13 19:38:36 - Step: [step1SaveToDatabase] executed in 138ms
+2025-08-13 19:38:36 - Executing step: [step2CalculateAge]
+2025-08-13 19:38:36 - 🚀 Starting Step 2: Calculating ages via API
+2025-08-13 19:38:36 -    - Chunk size: 10
+2025-08-13 19:38:36 -    - Step name: step2CalculateAge
+2025-08-13 19:38:36 - 🗄️ Creating database item reader
+2025-08-13 19:38:36 - 🔄 Initializing database reader - loading all persons
+2025-08-13 19:38:36 - 📊 Loaded 25 persons from database for execution 1
+2025-08-13 19:38:36 - 🧮 Creating age calculation processor
+2025-08-13 19:38:37 - 🏁 Finished reading from database - processed 25 persons
+2025-08-13 19:38:37 - ✅ Completed Step 2: Age calculation
+2025-08-13 19:38:37 -    - Read count: 25
+2025-08-13 19:38:37 -    - Write count: 3
+2025-08-13 19:38:37 -    - Skip count: 22
+2025-08-13 19:38:37 -    ⚠️ Skipped 22 items during processing (see logs for item details)
+2025-08-13 19:38:37 -    📦 Upsert summary - inserted: 0, updated: 3, written: 3
+2025-08-13 19:38:37 - Step: [step2CalculateAge] executed in 1s326ms
+2025-08-13 19:38:37 - Executing step: [step3WriteToFile]
+2025-08-13 19:38:37 - 🚀 Starting Step 3: Writing results to file
+2025-08-13 19:38:37 -    - Chunk size: 10
+2025-08-13 19:38:37 -    - Output file: output/persons_with_age.txt
+2025-08-13 19:38:37 -    - Step name: step3WriteToFile
+2025-08-13 19:38:37 - 📄 Creating database item reader for file output
+2025-08-13 19:38:37 - 🔄 Initializing file output database reader - loading all persons
+2025-08-13 19:38:37 - 📊 Loaded 3 persons from database for file output (exec=1, age != null)
+2025-08-13 19:38:37 - 🏁 Finished reading from database for file output - processed 3 persons
+2025-08-13 19:38:37 - ✅ Completed Step 3: Write to file
+2025-08-13 19:38:37 -    - Read count: 3
+2025-08-13 19:38:37 -    - Write count: 3
+2025-08-13 19:38:37 -    - Skip count: 0
+2025-08-13 19:38:37 - Step: [step3WriteToFile] executed in 15ms
+2025-08-13 19:38:37 - 🏁 ========================================
+2025-08-13 19:38:37 - ✅ JOB COMPLETED: processPersonJob
+2025-08-13 19:38:37 - 📋 Job Instance ID: 1
+2025-08-13 19:38:37 - 🆔 Job Execution ID: 1
+2025-08-13 19:38:37 - 📊 Final Status: COMPLETED
+2025-08-13 19:38:37 - ⏰ Start Time: 2025-08-13T19:38:36.166313
+2025-08-13 19:38:37 - ⏰ End Time: 2025-08-13T19:38:37.660445
+2025-08-13 19:38:37 - ⏱️ Total Duration: 1494 ms
+2025-08-13 19:38:37 - 📈 Exit Code: COMPLETED
+2025-08-13 19:38:37 - 📝 Exit Description: 
+2025-08-13 19:38:37 - 📋 Step Execution Summary:
+2025-08-13 19:38:37 -    📝 Step: step1SaveToDatabase - Status: COMPLETED - Read: 25 - Write: 25 - Skip: 0
+2025-08-13 19:38:37 -    ⏱️ Step Duration: 138 ms
+2025-08-13 19:38:37 -    📝 Step: step2CalculateAge - Status: COMPLETED - Read: 25 - Write: 3 - Skip: 22
+2025-08-13 19:38:37 -    ⏱️ Step Duration: 1326 ms
+2025-08-13 19:38:37 -    ⚠️ 22 items were skipped in step step2CalculateAge
+2025-08-13 19:38:37 -    📝 Step: step3WriteToFile - Status: COMPLETED - Read: 3 - Write: 3 - Skip: 0
+2025-08-13 19:38:37 -    ⏱️ Step Duration: 15 ms
+2025-08-13 19:38:37 - 🎉 JOB SUCCESSFULLY COMPLETED!
+2025-08-13 19:38:37 - ========================================
+
+
+2025-08-13 19:38:37 - Job: [SimpleJob: [name=processPersonJob]] completed with the following parameters: [{'skipEvery':'{value=2, type=class java.lang.String, identifying=true}','csvPath':'{value=input/persons.csv, type=class java.lang.String, identifying=true}','scenario':'{value=PARTIAL, type=class java.lang.String, identifying=true}'}] and the following status: [COMPLETED] in 1s494ms
+]]></system-out>
+  </testcase>
+  <testcase name="retryableScenario_retriesThenSucceeds" classname="com.example.springbatchtutorial.ScenarioIntegrationTests" time="12.485">
+    <system-out><![CDATA[2025-08-13 19:38:37 - Job: [SimpleJob: [name=processPersonJob]] launched with the following parameters: [{'csvPath':'{value=input/persons.csv, type=class java.lang.String, identifying=true}','scenario':'{value=RETRYABLE, type=class java.lang.String, identifying=true}','retryAttempts':'{value=2, type=class java.lang.String, identifying=true}'}]
+2025-08-13 19:38:37 - 
+
+🎬 ========================================
+2025-08-13 19:38:37 - 🚀 JOB STARTING: processPersonJob
+2025-08-13 19:38:37 - 📋 Job Instance ID: 2
+2025-08-13 19:38:37 - 🆔 Job Execution ID: 2
+2025-08-13 19:38:37 - ⏰ Start Time: 2025-08-13T19:38:37.671821
+2025-08-13 19:38:37 - 📊 Job Parameters: {'csvPath':'{value=input/persons.csv, type=class java.lang.String, identifying=true}','scenario':'{value=RETRYABLE, type=class java.lang.String, identifying=true}','retryAttempts':'{value=2, type=class java.lang.String, identifying=true}'}
+2025-08-13 19:38:37 - 🎯 Expected Steps: processPersonJob
+2025-08-13 19:38:37 - ========================================
+
+
+2025-08-13 19:38:37 - Executing step: [step1SaveToDatabase]
+2025-08-13 19:38:37 - 🚀 Starting Step 1: Reading CSV and saving to database
+2025-08-13 19:38:37 -    - Chunk size: 10
+2025-08-13 19:38:37 -    - Step name: step1SaveToDatabase
+2025-08-13 19:38:37 - 📖 Creating CSV item reader
+2025-08-13 19:38:37 - 🔄 Initializing CSV reader - loading data from file
+2025-08-13 19:38:37 - 📂 Reading CSV file: input/persons.csv
+2025-08-13 19:38:37 - 📄 File exists, size: 1164 bytes
+2025-08-13 19:38:37 - 📋 CSV Header: FirstName, LastName, Email, DateOfBirth
+2025-08-13 19:38:37 - ⚠️ Line 27: Insufficient columns (expected 4, got 1)
+2025-08-13 19:38:37 - ⚠️ Line 28: Insufficient columns (expected 4, got 1)
+2025-08-13 19:38:37 - 📊 CSV Processing Summary:
+2025-08-13 19:38:37 -    - Total lines processed: 27
+2025-08-13 19:38:37 -    - Valid records: 25
+2025-08-13 19:38:37 -    - Invalid records: 2
+2025-08-13 19:38:37 -    - Success rate: 93%
+2025-08-13 19:38:37 - ⚠️ Validation Errors Summary:
+2025-08-13 19:38:37 -    - Line 27: Insufficient columns (expected 4, got 1)
+2025-08-13 19:38:37 -    - Line 28: Insufficient columns (expected 4, got 1)
+2025-08-13 19:38:37 - 📊 Successfully parsed 25 persons from CSV file
+2025-08-13 19:38:37 - 📊 Loaded 25 persons from CSV file
+2025-08-13 19:38:37 - 🏁 Finished reading CSV data - processed 25 persons
+2025-08-13 19:38:37 - ✅ Completed Step 1: Save to database
+2025-08-13 19:38:37 -    - Read count: 25
+2025-08-13 19:38:37 -    - Write count: 25
+2025-08-13 19:38:37 -    - Skip count: 0
+2025-08-13 19:38:37 -    📦 Upsert summary - inserted: 25, updated: 0, written: 25
+2025-08-13 19:38:37 - Step: [step1SaveToDatabase] executed in 37ms
+2025-08-13 19:38:37 - Executing step: [step2CalculateAge]
+2025-08-13 19:38:37 - 🚀 Starting Step 2: Calculating ages via API
+2025-08-13 19:38:37 -    - Chunk size: 10
+2025-08-13 19:38:37 -    - Step name: step2CalculateAge
+2025-08-13 19:38:37 - 🗄️ Creating database item reader
+2025-08-13 19:38:37 - 🔄 Initializing database reader - loading all persons
+2025-08-13 19:38:37 - 📊 Loaded 25 persons from database for execution 2
+2025-08-13 19:38:37 - 🧮 Creating age calculation processor
+2025-08-13 19:38:48 - 🏁 Finished reading from database - processed 25 persons
+2025-08-13 19:38:50 - ✅ Completed Step 2: Age calculation
+2025-08-13 19:38:50 -    - Read count: 25
+2025-08-13 19:38:50 -    - Write count: 25
+2025-08-13 19:38:50 -    - Skip count: 0
+2025-08-13 19:38:50 -    📦 Upsert summary - inserted: 0, updated: 25, written: 25
+2025-08-13 19:38:50 - Step: [step2CalculateAge] executed in 12s423ms
+2025-08-13 19:38:50 - Executing step: [step3WriteToFile]
+2025-08-13 19:38:50 - 🚀 Starting Step 3: Writing results to file
+2025-08-13 19:38:50 -    - Chunk size: 10
+2025-08-13 19:38:50 -    - Output file: output/persons_with_age.txt
+2025-08-13 19:38:50 -    - Step name: step3WriteToFile
+2025-08-13 19:38:50 - 📄 Creating database item reader for file output
+2025-08-13 19:38:50 - 🔄 Initializing file output database reader - loading all persons
+2025-08-13 19:38:50 - 📊 Loaded 25 persons from database for file output (exec=2, age != null)
+2025-08-13 19:38:50 - 🏁 Finished reading from database for file output - processed 25 persons
+2025-08-13 19:38:50 - ✅ Completed Step 3: Write to file
+2025-08-13 19:38:50 -    - Read count: 25
+2025-08-13 19:38:50 -    - Write count: 25
+2025-08-13 19:38:50 -    - Skip count: 0
+2025-08-13 19:38:50 - Step: [step3WriteToFile] executed in 9ms
+2025-08-13 19:38:50 - 🏁 ========================================
+2025-08-13 19:38:50 - ✅ JOB COMPLETED: processPersonJob
+2025-08-13 19:38:50 - 📋 Job Instance ID: 2
+2025-08-13 19:38:50 - 🆔 Job Execution ID: 2
+2025-08-13 19:38:50 - 📊 Final Status: COMPLETED
+2025-08-13 19:38:50 - ⏰ Start Time: 2025-08-13T19:38:37.671821
+2025-08-13 19:38:50 - ⏰ End Time: 2025-08-13T19:38:50.149766
+2025-08-13 19:38:50 - ⏱️ Total Duration: 12477 ms
+2025-08-13 19:38:50 - 📈 Exit Code: COMPLETED
+2025-08-13 19:38:50 - 📝 Exit Description: 
+2025-08-13 19:38:50 - 📋 Step Execution Summary:
+2025-08-13 19:38:50 -    📝 Step: step1SaveToDatabase - Status: COMPLETED - Read: 25 - Write: 25 - Skip: 0
+2025-08-13 19:38:50 -    ⏱️ Step Duration: 37 ms
+2025-08-13 19:38:50 -    📝 Step: step2CalculateAge - Status: COMPLETED - Read: 25 - Write: 25 - Skip: 0
+2025-08-13 19:38:50 -    ⏱️ Step Duration: 12423 ms
+2025-08-13 19:38:50 -    📝 Step: step3WriteToFile - Status: COMPLETED - Read: 25 - Write: 25 - Skip: 0
+2025-08-13 19:38:50 -    ⏱️ Step Duration: 9 ms
+2025-08-13 19:38:50 - 🎉 JOB SUCCESSFULLY COMPLETED!
+2025-08-13 19:38:50 - ========================================
+
+
+2025-08-13 19:38:50 - Job: [SimpleJob: [name=processPersonJob]] completed with the following parameters: [{'csvPath':'{value=input/persons.csv, type=class java.lang.String, identifying=true}','scenario':'{value=RETRYABLE, type=class java.lang.String, identifying=true}','retryAttempts':'{value=2, type=class java.lang.String, identifying=true}'}] and the following status: [COMPLETED] in 12s477ms
+]]></system-out>
+  </testcase>
+  <testcase name="successScenario_usesSuccessCsv_completes" classname="com.example.springbatchtutorial.ScenarioIntegrationTests" time="1.477">
+    <system-out><![CDATA[2025-08-13 19:38:50 - Job: [SimpleJob: [name=processPersonJob]] launched with the following parameters: [{'csvPath':'{value=input/persons.csv, type=class java.lang.String, identifying=true}','scenario':'{value=SUCCESS, type=class java.lang.String, identifying=true}'}]
+2025-08-13 19:38:50 - 
+
+🎬 ========================================
+2025-08-13 19:38:50 - 🚀 JOB STARTING: processPersonJob
+2025-08-13 19:38:50 - 📋 Job Instance ID: 3
+2025-08-13 19:38:50 - 🆔 Job Execution ID: 3
+2025-08-13 19:38:50 - ⏰ Start Time: 2025-08-13T19:38:50.157662
+2025-08-13 19:38:50 - 📊 Job Parameters: {'csvPath':'{value=input/persons.csv, type=class java.lang.String, identifying=true}','scenario':'{value=SUCCESS, type=class java.lang.String, identifying=true}'}
+2025-08-13 19:38:50 - 🎯 Expected Steps: processPersonJob
+2025-08-13 19:38:50 - ========================================
+
+
+2025-08-13 19:38:50 - Executing step: [step1SaveToDatabase]
+2025-08-13 19:38:50 - 🚀 Starting Step 1: Reading CSV and saving to database
+2025-08-13 19:38:50 -    - Chunk size: 10
+2025-08-13 19:38:50 -    - Step name: step1SaveToDatabase
+2025-08-13 19:38:50 - 📖 Creating CSV item reader
+2025-08-13 19:38:50 - 🔄 Initializing CSV reader - loading data from file
+2025-08-13 19:38:50 - 📂 Reading CSV file: input/persons.csv
+2025-08-13 19:38:50 - 📄 File exists, size: 1264 bytes
+2025-08-13 19:38:50 - 📋 CSV Header: FirstName, LastName, Email, DateOfBirth
+2025-08-13 19:38:50 - ⚠️ Line 27: Insufficient columns (expected 4, got 1)
+2025-08-13 19:38:50 - ⚠️ Line 28: Insufficient columns (expected 4, got 1)
+2025-08-13 19:38:50 - 📊 CSV Processing Summary:
+2025-08-13 19:38:50 -    - Total lines processed: 27
+2025-08-13 19:38:50 -    - Valid records: 25
+2025-08-13 19:38:50 -    - Invalid records: 2
+2025-08-13 19:38:50 -    - Success rate: 93%
+2025-08-13 19:38:50 - ⚠️ Validation Errors Summary:
+2025-08-13 19:38:50 -    - Line 27: Insufficient columns (expected 4, got 1)
+2025-08-13 19:38:50 -    - Line 28: Insufficient columns (expected 4, got 1)
+2025-08-13 19:38:50 - 📊 Successfully parsed 25 persons from CSV file
+2025-08-13 19:38:50 - 📊 Loaded 25 persons from CSV file
+2025-08-13 19:38:50 - 🏁 Finished reading CSV data - processed 25 persons
+2025-08-13 19:38:50 - ✅ Completed Step 1: Save to database
+2025-08-13 19:38:50 -    - Read count: 25
+2025-08-13 19:38:50 -    - Write count: 25
+2025-08-13 19:38:50 -    - Skip count: 0
+2025-08-13 19:38:50 -    📦 Upsert summary - inserted: 0, updated: 25, written: 25
+2025-08-13 19:38:50 - Step: [step1SaveToDatabase] executed in 32ms
+2025-08-13 19:38:50 - Executing step: [step2CalculateAge]
+2025-08-13 19:38:50 - 🚀 Starting Step 2: Calculating ages via API
+2025-08-13 19:38:50 -    - Chunk size: 10
+2025-08-13 19:38:50 -    - Step name: step2CalculateAge
+2025-08-13 19:38:50 - 🗄️ Creating database item reader
+2025-08-13 19:38:50 - 🔄 Initializing database reader - loading all persons
+2025-08-13 19:38:50 - 📊 Loaded 25 persons from database for execution 3
+2025-08-13 19:38:50 - 🧮 Creating age calculation processor
+2025-08-13 19:38:51 - 🏁 Finished reading from database - processed 25 persons
+2025-08-13 19:38:51 - ✅ Completed Step 2: Age calculation
+2025-08-13 19:38:51 -    - Read count: 25
+2025-08-13 19:38:51 -    - Write count: 25
+2025-08-13 19:38:51 -    - Skip count: 0
+2025-08-13 19:38:51 -    📦 Upsert summary - inserted: 0, updated: 25, written: 25
+2025-08-13 19:38:51 - Step: [step2CalculateAge] executed in 1s419ms
+2025-08-13 19:38:51 - Executing step: [step3WriteToFile]
+2025-08-13 19:38:51 - 🚀 Starting Step 3: Writing results to file
+2025-08-13 19:38:51 -    - Chunk size: 10
+2025-08-13 19:38:51 -    - Output file: output/persons_with_age.txt
+2025-08-13 19:38:51 -    - Step name: step3WriteToFile
+2025-08-13 19:38:51 - 📄 Creating database item reader for file output
+2025-08-13 19:38:51 - 🔄 Initializing file output database reader - loading all persons
+2025-08-13 19:38:51 - 📊 Loaded 25 persons from database for file output (exec=3, age != null)
+2025-08-13 19:38:51 - 🏁 Finished reading from database for file output - processed 25 persons
+2025-08-13 19:38:51 - ✅ Completed Step 3: Write to file
+2025-08-13 19:38:51 -    - Read count: 25
+2025-08-13 19:38:51 -    - Write count: 25
+2025-08-13 19:38:51 -    - Skip count: 0
+2025-08-13 19:38:51 - Step: [step3WriteToFile] executed in 9ms
+2025-08-13 19:38:51 - 🏁 ========================================
+2025-08-13 19:38:51 - ✅ JOB COMPLETED: processPersonJob
+2025-08-13 19:38:51 - 📋 Job Instance ID: 3
+2025-08-13 19:38:51 - 🆔 Job Execution ID: 3
+2025-08-13 19:38:51 - 📊 Final Status: COMPLETED
+2025-08-13 19:38:51 - ⏰ Start Time: 2025-08-13T19:38:50.157662
+2025-08-13 19:38:51 - ⏰ End Time: 2025-08-13T19:38:51.626913
+2025-08-13 19:38:51 - ⏱️ Total Duration: 1469 ms
+2025-08-13 19:38:51 - 📈 Exit Code: COMPLETED
+2025-08-13 19:38:51 - 📝 Exit Description: 
+2025-08-13 19:38:51 - 📋 Step Execution Summary:
+2025-08-13 19:38:51 -    📝 Step: step1SaveToDatabase - Status: COMPLETED - Read: 25 - Write: 25 - Skip: 0
+2025-08-13 19:38:51 -    ⏱️ Step Duration: 32 ms
+2025-08-13 19:38:51 -    📝 Step: step2CalculateAge - Status: COMPLETED - Read: 25 - Write: 25 - Skip: 0
+2025-08-13 19:38:51 -    ⏱️ Step Duration: 1419 ms
+2025-08-13 19:38:51 -    📝 Step: step3WriteToFile - Status: COMPLETED - Read: 25 - Write: 25 - Skip: 0
+2025-08-13 19:38:51 -    ⏱️ Step Duration: 9 ms
+2025-08-13 19:38:51 - 🎉 JOB SUCCESSFULLY COMPLETED!
+2025-08-13 19:38:51 - ========================================
+
+
+2025-08-13 19:38:51 - Job: [SimpleJob: [name=processPersonJob]] completed with the following parameters: [{'csvPath':'{value=input/persons.csv, type=class java.lang.String, identifying=true}','scenario':'{value=SUCCESS, type=class java.lang.String, identifying=true}'}] and the following status: [COMPLETED] in 1s469ms
+]]></system-out>
+  </testcase>
+  <testcase name="failScenario_failsImmediately" classname="com.example.springbatchtutorial.ScenarioIntegrationTests" time="0.042">
+    <system-out><![CDATA[2025-08-13 19:38:51 - Job: [SimpleJob: [name=processPersonJob]] launched with the following parameters: [{'csvPath':'{value=input/persons.csv, type=class java.lang.String, identifying=true}','scenario':'{value=FAIL, type=class java.lang.String, identifying=true}'}]
+2025-08-13 19:38:51 - 
+
+🎬 ========================================
+2025-08-13 19:38:51 - 🚀 JOB STARTING: processPersonJob
+2025-08-13 19:38:51 - 📋 Job Instance ID: 4
+2025-08-13 19:38:51 - 🆔 Job Execution ID: 4
+2025-08-13 19:38:51 - ⏰ Start Time: 2025-08-13T19:38:51.635166
+2025-08-13 19:38:51 - 📊 Job Parameters: {'csvPath':'{value=input/persons.csv, type=class java.lang.String, identifying=true}','scenario':'{value=FAIL, type=class java.lang.String, identifying=true}'}
+2025-08-13 19:38:51 - 🎯 Expected Steps: processPersonJob
+2025-08-13 19:38:51 - ========================================
+
+
+2025-08-13 19:38:51 - Executing step: [step1SaveToDatabase]
+2025-08-13 19:38:51 - 🚀 Starting Step 1: Reading CSV and saving to database
+2025-08-13 19:38:51 -    - Chunk size: 10
+2025-08-13 19:38:51 -    - Step name: step1SaveToDatabase
+2025-08-13 19:38:51 - 📖 Creating CSV item reader
+2025-08-13 19:38:51 - 🔄 Initializing CSV reader - loading data from file
+2025-08-13 19:38:51 - 📂 Reading CSV file: input/persons.csv
+2025-08-13 19:38:51 - 📄 File exists, size: 1113 bytes
+2025-08-13 19:38:51 - 📋 CSV Header: FirstName, LastName, Email, DateOfBirth
+2025-08-13 19:38:51 - ⚠️ Line 27: Insufficient columns (expected 4, got 1)
+2025-08-13 19:38:51 - 📊 CSV Processing Summary:
+2025-08-13 19:38:51 -    - Total lines processed: 26
+2025-08-13 19:38:51 -    - Valid records: 25
+2025-08-13 19:38:51 -    - Invalid records: 1
+2025-08-13 19:38:51 -    - Success rate: 96%
+2025-08-13 19:38:51 - ⚠️ Validation Errors Summary:
+2025-08-13 19:38:51 -    - Line 27: Insufficient columns (expected 4, got 1)
+2025-08-13 19:38:51 - 📊 Successfully parsed 25 persons from CSV file
+2025-08-13 19:38:51 - 📊 Loaded 25 persons from CSV file
+2025-08-13 19:38:51 - 🏁 Finished reading CSV data - processed 25 persons
+2025-08-13 19:38:51 - ✅ Completed Step 1: Save to database
+2025-08-13 19:38:51 -    - Read count: 25
+2025-08-13 19:38:51 -    - Write count: 25
+2025-08-13 19:38:51 -    - Skip count: 0
+2025-08-13 19:38:51 -    📦 Upsert summary - inserted: 25, updated: 0, written: 25
+2025-08-13 19:38:51 - Step: [step1SaveToDatabase] executed in 22ms
+2025-08-13 19:38:51 - Executing step: [step2CalculateAge]
+2025-08-13 19:38:51 - 🚀 Starting Step 2: Calculating ages via API
+2025-08-13 19:38:51 -    - Chunk size: 10
+2025-08-13 19:38:51 -    - Step name: step2CalculateAge
+2025-08-13 19:38:51 - 🗄️ Creating database item reader
+2025-08-13 19:38:51 - 🔄 Initializing database reader - loading all persons
+2025-08-13 19:38:51 - 📊 Loaded 25 persons from database for execution 4
+2025-08-13 19:38:51 - 🧮 Creating age calculation processor
+2025-08-13 19:38:51 - Encountered an error executing step step2CalculateAge in job processPersonJob
+org.springframework.retry.RetryException: Non-skippable exception in recoverer while processing
+	at org.springframework.batch.core.step.item.FaultTolerantChunkProcessor.lambda$transform$1(FaultTolerantChunkProcessor.java:284)
+	at org.springframework.retry.support.RetryTemplate.handleRetryExhausted(RetryTemplate.java:543)
+	at org.springframework.retry.support.RetryTemplate.doExecute(RetryTemplate.java:389)
+	at org.springframework.retry.support.RetryTemplate.execute(RetryTemplate.java:255)
+	at org.springframework.batch.core.step.item.BatchRetryTemplate.execute(BatchRetryTemplate.java:216)
+	at org.springframework.batch.core.step.item.FaultTolerantChunkProcessor.transform(FaultTolerantChunkProcessor.java:291)
+	at org.springframework.batch.core.step.item.SimpleChunkProcessor.process(SimpleChunkProcessor.java:220)
+	at org.springframework.batch.core.step.item.ChunkOrientedTasklet.execute(ChunkOrientedTasklet.java:75)
+	at org.springframework.batch.core.step.tasklet.TaskletStep$ChunkTransactionCallback.doInTransaction(TaskletStep.java:388)
+	at org.springframework.batch.core.step.tasklet.TaskletStep$ChunkTransactionCallback.doInTransaction(TaskletStep.java:312)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140)
+	at org.springframework.batch.core.step.tasklet.TaskletStep$2.doInChunkContext(TaskletStep.java:255)
+	at org.springframework.batch.core.scope.context.StepContextRepeatCallback.doInIteration(StepContextRepeatCallback.java:82)
+	at org.springframework.batch.repeat.support.RepeatTemplate.getNextResult(RepeatTemplate.java:369)
+	at org.springframework.batch.repeat.support.RepeatTemplate.executeInternal(RepeatTemplate.java:206)
+	at org.springframework.batch.repeat.support.RepeatTemplate.iterate(RepeatTemplate.java:140)
+	at org.springframework.batch.core.step.tasklet.TaskletStep.doExecute(TaskletStep.java:240)
+	at org.springframework.batch.core.step.AbstractStep.execute(AbstractStep.java:229)
+	at org.springframework.batch.core.job.SimpleStepHandler.handleStep(SimpleStepHandler.java:153)
+	at org.springframework.batch.core.job.AbstractJob.handleStep(AbstractJob.java:418)
+	at org.springframework.batch.core.job.SimpleJob.doExecute(SimpleJob.java:132)
+	at org.springframework.batch.core.job.AbstractJob.execute(AbstractJob.java:317)
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher$1.run(SimpleJobLauncher.java:157)
+	at org.springframework.core.task.SyncTaskExecutor.execute(SyncTaskExecutor.java:50)
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher.run(SimpleJobLauncher.java:148)
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher.run(TaskExecutorJobLauncher.java:59)
+	at org.springframework.batch.test.JobLauncherTestUtils.launchJob(JobLauncherTestUtils.java:146)
+	at com.example.springbatchtutorial.ScenarioIntegrationTests.failScenario_failsImmediately(ScenarioIntegrationTests.java:66)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: java.lang.RuntimeException: Simulated hard failure for demonstration
+	at com.example.springbatchtutorial.config.BatchConfig.lambda$0(BatchConfig.java:499)
+	at jdk.internal.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:352)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.doProceed(DelegatingIntroductionInterceptor.java:137)
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.invoke(DelegatingIntroductionInterceptor.java:124)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:249)
+	at jdk.proxy2/jdk.proxy2.$Proxy155.process(Unknown Source)
+	at jdk.internal.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:352)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:242)
+	at jdk.proxy2/jdk.proxy2.$Proxy148.process(Unknown Source)
+	at org.springframework.batch.core.step.item.SimpleChunkProcessor.doProcess(SimpleChunkProcessor.java:146)
+	at org.springframework.batch.core.step.item.FaultTolerantChunkProcessor.lambda$transform$0(FaultTolerantChunkProcessor.java:228)
+	at org.springframework.retry.support.RetryTemplate.doExecute(RetryTemplate.java:329)
+	... 96 common frames omitted
+2025-08-13 19:38:51 - ✅ Completed Step 2: Age calculation
+2025-08-13 19:38:51 -    - Read count: 10
+2025-08-13 19:38:51 -    - Write count: 0
+2025-08-13 19:38:51 -    - Skip count: 0
+2025-08-13 19:38:51 -    📦 Upsert summary - inserted: 0, updated: 0, written: 0
+2025-08-13 19:38:51 - Step: [step2CalculateAge] executed in 7ms
+2025-08-13 19:38:51 - 🏁 ========================================
+2025-08-13 19:38:51 - ✅ JOB COMPLETED: processPersonJob
+2025-08-13 19:38:51 - 📋 Job Instance ID: 4
+2025-08-13 19:38:51 - 🆔 Job Execution ID: 4
+2025-08-13 19:38:51 - 📊 Final Status: FAILED
+2025-08-13 19:38:51 - ⏰ Start Time: 2025-08-13T19:38:51.635166
+2025-08-13 19:38:51 - ⏰ End Time: 2025-08-13T19:38:51.670930
+2025-08-13 19:38:51 - ⏱️ Total Duration: 35 ms
+2025-08-13 19:38:51 - 📈 Exit Code: FAILED
+2025-08-13 19:38:51 - 📝 Exit Description: org.springframework.retry.RetryException: Non-skippable exception in recoverer while processing
+	at org.springframework.batch.core.step.item.FaultTolerantChunkProcessor.lambda$transform$1(FaultTolerantChunkProcessor.java:284)
+	at org.springframework.retry.support.RetryTemplate.handleRetryExhausted(RetryTemplate.java:543)
+	at org.springframework.retry.support.RetryTemplate.doExecute(RetryTemplate.java:389)
+	at org.springframework.retry.support.RetryTemplate.execute(RetryTemplate.java:255)
+	at org.springframework.batch.core.step.item.BatchRetryTemplate.execute(BatchRetryTemplate.java:216)
+	at org.springframework.batch.core.step.item.FaultTolerantChunkProcessor.transform(FaultTolerantChunkProcessor.java:291)
+	at org.springframework.batch.core.step.item.SimpleChunkProcessor.process(SimpleChunkProcessor.java:220)
+	at org.springframework.batch.core.step.item.ChunkOrientedTasklet.execute(ChunkOrientedTasklet.java:75)
+	at org.springframework.batch.core.step.tasklet.TaskletStep$ChunkTransactionCallback.doInTransaction(TaskletStep.java:388)
+	at org.springframework.batch.core.step.tasklet.TaskletStep$ChunkTransactionCallback.doInTransaction(TaskletStep.java:312)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140)
+	at org.springframework.batch.core.step.tasklet.TaskletStep$2.doInChunkContext(TaskletStep.java:255)
+	at org.springframework.batch.core.scope.context.StepContextRepeatCallback.doInIteration(StepContextRepeatCallback.java:82)
+	at org.springframework.batch.repeat.support.RepeatTemplate.getNextResult(RepeatTemplate.java:369)
+	at org.springframework.batch.repeat.support.RepeatTemplate.executeInternal(RepeatTemplate.java:206)
+	at org.springframework.batch.repeat.support.RepeatTemplate.iterate(RepeatTemplate.java:140)
+	at org.springframework.batch.core.step.tasklet.TaskletStep.doExecute(TaskletStep.java:240)
+	at org.springframework.batch.core.step.AbstractStep.execute(AbstractStep.java:229)
+	at org.springframework.batch.core.job.SimpleStepHandler.handleStep(SimpleStepHandler.java:153)
+	at org.springframework.batch.core.job.AbstractJob.handleStep(AbstractJob.java:418)
+	at org.springframework.batch.core.job.SimpleJob.doExecute(SimpleJob.java:132)
+	at org.springframework.batch.core.job.AbstractJob.execute(AbstractJob.java:317)
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher$1.run(SimpleJobLauncher.java:157)
+	at org.springframework.core.task.SyncTaskExecutor.execute(SyncTaskExecutor.java:50)
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher.run(SimpleJobLauncher.java:148)
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher.run(TaskExecutorJobLauncher.java:59)
+	at org.springframework.batch.test.JobLauncherTestUtils.launchJob(JobLauncherTestUtils.java:146)
+	at com.example.springbatchtutorial.ScenarioIntegrationTests.failScenario_failsImmediately(ScenarioIntegrationTests.java:66)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: java.lang.RuntimeException: Simulated hard failure for demonstration
+	at com.example.springbatchtutorial.config.BatchConfig.lambda$0(BatchConfig.java:499)
+	at jdk.internal.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:352)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.doProceed(DelegatingIntroductionInterceptor.java:137)
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.invoke(DelegatingIntroductionInterceptor.java:124)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:249)
+	at jdk.proxy2/jdk.proxy2.$Proxy155.process(Unknown Source)
+	at jdk.internal.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:352)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:242)
+	at jdk.proxy2/jdk.proxy2.$Proxy148.process(Unknown Source)
+	at org.springframework.batch.core.step.item.SimpleChunkProcessor.doProcess(SimpleChunkProcessor.java:146)
+	at org.springframework.batch.core.step.item.FaultTolerantChunkProcessor.lambda$transform$0(FaultTolerantChunkProcessor.java:228)
+	at org.springframework.retry.support.RetryTemplate.doExecute(RetryTemplate.java:329)
+	... 96 more
+
+2025-08-13 19:38:51 - 📋 Step Execution Summary:
+2025-08-13 19:38:51 -    📝 Step: step1SaveToDatabase - Status: COMPLETED - Read: 25 - Write: 25 - Skip: 0
+2025-08-13 19:38:51 -    ⏱️ Step Duration: 22 ms
+2025-08-13 19:38:51 -    📝 Step: step2CalculateAge - Status: FAILED - Read: 10 - Write: 0 - Skip: 0
+2025-08-13 19:38:51 -    ⏱️ Step Duration: 7 ms
+2025-08-13 19:38:51 - ❌ JOB FAILED!
+2025-08-13 19:38:51 - 🔍 Failure Exceptions:
+2025-08-13 19:38:51 -    ❌ Exception: Non-skippable exception in recoverer while processing
+org.springframework.retry.RetryException: Non-skippable exception in recoverer while processing
+	at org.springframework.batch.core.step.item.FaultTolerantChunkProcessor.lambda$transform$1(FaultTolerantChunkProcessor.java:284)
+	at org.springframework.retry.support.RetryTemplate.handleRetryExhausted(RetryTemplate.java:543)
+	at org.springframework.retry.support.RetryTemplate.doExecute(RetryTemplate.java:389)
+	at org.springframework.retry.support.RetryTemplate.execute(RetryTemplate.java:255)
+	at org.springframework.batch.core.step.item.BatchRetryTemplate.execute(BatchRetryTemplate.java:216)
+	at org.springframework.batch.core.step.item.FaultTolerantChunkProcessor.transform(FaultTolerantChunkProcessor.java:291)
+	at org.springframework.batch.core.step.item.SimpleChunkProcessor.process(SimpleChunkProcessor.java:220)
+	at org.springframework.batch.core.step.item.ChunkOrientedTasklet.execute(ChunkOrientedTasklet.java:75)
+	at org.springframework.batch.core.step.tasklet.TaskletStep$ChunkTransactionCallback.doInTransaction(TaskletStep.java:388)
+	at org.springframework.batch.core.step.tasklet.TaskletStep$ChunkTransactionCallback.doInTransaction(TaskletStep.java:312)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140)
+	at org.springframework.batch.core.step.tasklet.TaskletStep$2.doInChunkContext(TaskletStep.java:255)
+	at org.springframework.batch.core.scope.context.StepContextRepeatCallback.doInIteration(StepContextRepeatCallback.java:82)
+	at org.springframework.batch.repeat.support.RepeatTemplate.getNextResult(RepeatTemplate.java:369)
+	at org.springframework.batch.repeat.support.RepeatTemplate.executeInternal(RepeatTemplate.java:206)
+	at org.springframework.batch.repeat.support.RepeatTemplate.iterate(RepeatTemplate.java:140)
+	at org.springframework.batch.core.step.tasklet.TaskletStep.doExecute(TaskletStep.java:240)
+	at org.springframework.batch.core.step.AbstractStep.execute(AbstractStep.java:229)
+	at org.springframework.batch.core.job.SimpleStepHandler.handleStep(SimpleStepHandler.java:153)
+	at org.springframework.batch.core.job.AbstractJob.handleStep(AbstractJob.java:418)
+	at org.springframework.batch.core.job.SimpleJob.doExecute(SimpleJob.java:132)
+	at org.springframework.batch.core.job.AbstractJob.execute(AbstractJob.java:317)
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher$1.run(SimpleJobLauncher.java:157)
+	at org.springframework.core.task.SyncTaskExecutor.execute(SyncTaskExecutor.java:50)
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher.run(SimpleJobLauncher.java:148)
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher.run(TaskExecutorJobLauncher.java:59)
+	at org.springframework.batch.test.JobLauncherTestUtils.launchJob(JobLauncherTestUtils.java:146)
+	at com.example.springbatchtutorial.ScenarioIntegrationTests.failScenario_failsImmediately(ScenarioIntegrationTests.java:66)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: java.lang.RuntimeException: Simulated hard failure for demonstration
+	at com.example.springbatchtutorial.config.BatchConfig.lambda$0(BatchConfig.java:499)
+	at jdk.internal.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:352)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.doProceed(DelegatingIntroductionInterceptor.java:137)
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.invoke(DelegatingIntroductionInterceptor.java:124)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:249)
+	at jdk.proxy2/jdk.proxy2.$Proxy155.process(Unknown Source)
+	at jdk.internal.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:352)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:242)
+	at jdk.proxy2/jdk.proxy2.$Proxy148.process(Unknown Source)
+	at org.springframework.batch.core.step.item.SimpleChunkProcessor.doProcess(SimpleChunkProcessor.java:146)
+	at org.springframework.batch.core.step.item.FaultTolerantChunkProcessor.lambda$transform$0(FaultTolerantChunkProcessor.java:228)
+	at org.springframework.retry.support.RetryTemplate.doExecute(RetryTemplate.java:329)
+	... 96 common frames omitted
+2025-08-13 19:38:51 - ========================================
+
+
+2025-08-13 19:38:51 - Job: [SimpleJob: [name=processPersonJob]] completed with the following parameters: [{'csvPath':'{value=input/persons.csv, type=class java.lang.String, identifying=true}','scenario':'{value=FAIL, type=class java.lang.String, identifying=true}'}] and the following status: [FAILED] in 35ms
+]]></system-out>
+  </testcase>
+</testsuite>
