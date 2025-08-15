@@ -294,6 +294,12 @@
                         <option value="RETRYABLE">RETRYABLE</option>
                     </select>
                 </label>
+                <label style="margin-left: 12px;">Large File: 
+                    <select id="largeFileSelect">
+                        <option value="">(default - small file)</option>
+                        <option value="input/samples/persons_partial_10k.csv">10k records (large)</option>
+                    </select>
+                </label>
                 <label style="margin-left: 12px;">skipEvery: <input id="skipEveryInput" type="number" min="0" placeholder="e.g. 3" style="width: 80px;"></label>
                 <label style="margin-left: 12px;">retryAttempts: <input id="retryAttemptsInput" type="number" min="0" placeholder="e.g. 2" style="width: 80px;"></label>
                 <label style="margin-left: 12px;">CSV file:
@@ -478,14 +484,18 @@
             
             try {
                 const scenario = document.getElementById('scenarioSelect').value;
+                const largeFile = document.getElementById('largeFileSelect').value || null;
                 const skipEvery = document.getElementById('skipEveryInput').value || null;
                 const retryAttempts = document.getElementById('retryAttemptsInput').value || null;
                 const csvPath = document.getElementById('csvSelect').value || null;
 
+                // Use large file if selected, otherwise use csvPath
+                const finalCsvPath = largeFile || csvPath;
+
                 const response = await fetch('/api/jobs/start', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ scenario, skipEvery, retryAttempts, csvPath })
+                    body: JSON.stringify({ scenario, skipEvery, retryAttempts, csvPath: finalCsvPath })
                 });
                 
                 const result = await response.text();

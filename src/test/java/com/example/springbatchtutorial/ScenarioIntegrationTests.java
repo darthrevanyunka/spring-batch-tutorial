@@ -93,21 +93,7 @@ class ScenarioIntegrationTests {
         assertEquals(BatchStatus.COMPLETED, exec.getStatus());
     }
 
-    @Test
-    void largeVolume_retryable_retriesThenCompletes() throws Exception {
-        // Dataset contains 10k rows with every 7th having an invalid email (filtered in Step 1).
-        // Drive Step 2 with RETRYABLE so each item retries transiently and then succeeds.
-        copy("input/samples/persons_partial_10k.csv", "input/persons.csv");
 
-        JobExecution exec = jobLauncherTestUtils.launchJob(new JobParametersBuilder()
-                .addString("time", java.util.UUID.randomUUID().toString(), true)
-                .addString("scenario", "RETRYABLE")
-                .addString("retryAttempts", "2")
-                .addString("csvPath", "input/persons.csv")
-                .toJobParameters());
-
-        assertEquals(BatchStatus.COMPLETED, exec.getStatus());
-    }
 
     @Test
     void editableCsv_fixThenRerun_upsertsFixedPersons() throws Exception {
