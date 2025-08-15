@@ -1,0 +1,91 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-batch-tutorial
+  namespace: batch-processing
+  labels:
+    app: spring-batch-tutorial
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spring-batch-tutorial
+  template:
+    metadata:
+      labels:
+        app: spring-batch-tutorial
+    spec:
+      containers:
+      - name: spring-batch-tutorial
+        image: spring-batch-tutorial:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8080
+        env:
+        - name: SPRING_PROFILES_ACTIVE
+          value: "kubernetes"
+        - name: SPRING_DATASOURCE_URL
+          value: "jdbc:h2:mem:testdb"
+        - name: SPRING_BATCH_JOB_ENABLED
+          value: "false"
+        - name: SCENARIO
+          value: "SUCCESS"
+        - name: CSV_PATH
+          value: "/app/input/persons.csv"
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "500m"
+          limits:
+            memory: "1024Mi"
+            cpu: "1000m"
+        volumeMounts:
+        - name: input-data
+          mountPath: /app/input
+        - name: output-data
+          mountPath: /app/output
+      volumes:
+      - name: input-data
+        persistentVolumeClaim:
+          claimName: input-pvc
+      - name: output-data
+        persistentVolumeClaim:
+          claimName: output-pvc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: spring-batch-tutorial-service
+  namespace: batch-processing
+spec:
+  selector:
+    app: spring-batch-tutorial
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080
+  type: ClusterIP
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: input-pvc
+  namespace: batch-processing
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: output-pvc
+  namespace: batch-processing
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi

@@ -1,0 +1,83 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: scdf-server
+  namespace: scdf-system
+  labels:
+    app: scdf-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: scdf-server
+  template:
+    metadata:
+      labels:
+        app: scdf-server
+    spec:
+      containers:
+      - name: scdf-server
+        image: springcloud/spring-cloud-dataflow-server:2.9.0
+        ports:
+        - containerPort: 9393
+        env:
+        - name: SPRING_PROFILES_ACTIVE
+          value: "kubernetes"
+        - name: SPRING_CLOUD_DATAFLOW_TASK_PLATFORM_KUBERNETES_ACCOUNTS_DEFAULT_NAMESPACE
+          value: "batch-processing"
+        - name: SPRING_CLOUD_DATAFLOW_TASK_PLATFORM_KUBERNETES_ACCOUNTS_DEFAULT_IMAGE_PULL_POLICY
+          value: "IfNotPresent"
+        - name: SPRING_CLOUD_DATAFLOW_TASK_PLATFORM_KUBERNETES_ACCOUNTS_DEFAULT_LIMITS_MEMORY
+          value: "1024Mi"
+        - name: SPRING_CLOUD_DATAFLOW_TASK_PLATFORM_KUBERNETES_ACCOUNTS_DEFAULT_LIMITS_CPU
+          value: "1000m"
+        - name: SPRING_CLOUD_DATAFLOW_TASK_PLATFORM_KUBERNETES_ACCOUNTS_DEFAULT_REQUESTS_MEMORY
+          value: "512Mi"
+        - name: SPRING_CLOUD_DATAFLOW_TASK_PLATFORM_KUBERNETES_ACCOUNTS_DEFAULT_REQUESTS_CPU
+          value: "500m"
+        - name: SPRING_CLOUD_DATAFLOW_TASK_PLATFORM_KUBERNETES_ACCOUNTS_DEFAULT_ENVIRONMENT_VARIABLES_SPRING_PROFILES_ACTIVE
+          value: "kubernetes"
+        - name: JAVA_OPTS
+          value: "-Xmx1g -Xms512m -XX:MaxMetaspaceSize=256m"
+        - name: BPL_JVM_HEAD_ROOM
+          value: "10"
+        - name: BPL_JVM_LOADED_CLASS_COUNT
+          value: "50"
+        - name: BPL_JVM_THREAD_COUNT
+          value: "200"
+        resources:
+          requests:
+            memory: "2Gi"
+            cpu: "500m"
+          limits:
+            memory: "3Gi"
+            cpu: "1000m"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: scdf-server
+  namespace: scdf-system
+spec:
+  selector:
+    app: scdf-server
+  ports:
+  - protocol: TCP
+    port: 9393
+    targetPort: 9393
+  type: LoadBalancer
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: scdf-server-nodeport
+  namespace: scdf-system
+spec:
+  selector:
+    app: scdf-server
+  ports:
+  - protocol: TCP
+    port: 9393
+    targetPort: 9393
+    nodePort: 30000
+  type: NodePort

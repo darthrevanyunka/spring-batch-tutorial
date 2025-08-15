@@ -34,18 +34,44 @@ spring:
     job-repository:
       table-prefix: BATCH_
   
+  # Spring Cloud Task Configuration
+  cloud:
+    task:
+      execution:
+        events:
+          enabled: true
+        cleanup:
+          on-task-end: true
+    dataflow:
+      task:
+        platform:
+          kubernetes:
+            accounts:
+              default:
+                namespace: default
+                imagePullPolicy: IfNotPresent
+                imagePullSecret: ""
+                limits:
+                  memory: 1024Mi
+                  cpu: 1000m
+                requests:
+                  memory: 512Mi
+                  cpu: 500m
+  
   # Actuator Configuration
   management:
     endpoints:
       web:
         exposure:
-          include: health,info,metrics,batch-jobs,batch-job-executions
+          include: health,info,metrics,batch-jobs,batch-job-executions,task-executions
     endpoint:
       health:
         show-details: always
       batch-jobs:
         enabled: true
       batch-job-executions:
+        enabled: true
+      task-executions:
         enabled: true
 
 # Logging Configuration
@@ -54,6 +80,8 @@ logging:
     com.example.springbatchtutorial: INFO
     com.example.springbatchtutorial.controller: WARN
     org.springframework.batch: INFO
+    org.springframework.cloud.task: INFO
+    org.springframework.cloud.dataflow: INFO
     org.hibernate: ERROR
   pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
@@ -66,4 +94,12 @@ server:
 batch:
   csv:
     file:
-      path: input/persons.csv 
+      path: input/persons.csv
+
+# Task Configuration for SCDF
+task:
+  execution:
+    events:
+      enabled: true
+    cleanup:
+      on-task-end: true 
